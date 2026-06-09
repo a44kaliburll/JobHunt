@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Listings — JobHunt{% endblock %}
+{% block content %}
+<h1>Listings</h1>
+<div class="card">
+  <form method="post" action="/run" style="margin-bottom: 1rem;">
+    <button type="submit">Run job hunt now</button>
+  </form>
+  {% include "_listings_table.html" %}
+</div>
+{% endblock %}

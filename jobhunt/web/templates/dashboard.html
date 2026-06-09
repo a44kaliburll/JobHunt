@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}Dashboard — JobHunt{% endblock %}
+{% block content %}
+<h1>Welcome{{ ', ' + user.name if user.name else '' }}</h1>
+
+<div class="card">
+  <h2>Your extracted profile</h2>
+  {% if resume_count == 0 %}
+    <p class="muted">No resumes yet — <a href="/resumes">upload one</a> to build your search profile.</p>
+  {% else %}
+    <p class="muted">Merged from {{ resume_count }} resume(s). These drive the job-board queries and match scoring.</p>
+    <p><strong>Search titles:</strong>
+      {% for t in profile.titles %}<span class="pill">{{ t }}</span>{% else %}<span class="muted">none detected</span>{% endfor %}
+    </p>
+    <p><strong>Skills:</strong>
+      {% for s in profile.skills[:30] %}<span class="pill">{{ s }}</span>{% else %}<span class="muted">none detected</span>{% endfor %}
+      {% if profile.skills|length > 30 %}<span class="muted">+{{ profile.skills|length - 30 }} more</span>{% endif %}
+    </p>
+    <p><strong>Certifications:</strong>
+      {% for c in profile.certifications %}<span class="pill">{{ c }}</span>{% else %}<span class="muted">none detected</span>{% endfor %}
+    </p>
+    <p class="muted"><strong>{{ profile.duties|length }}</strong> experience bullets captured for duty matching.</p>
+  {% endif %}
+</div>
+
+<div class="card">
+  <h2>Search settings</h2>
+  <form method="post" action="/settings">
+    <label>Preferred locations (comma-separated; use <code>Remote</code> for remote)</label>
+    <input type="text" name="locations" value="{{ user.locations | join(', ') }}" placeholder="Albany, NY, Remote">
+    <label>Extra search titles (added to resume-derived titles)</label>
+    <input type="text" name="extra_titles" value="{{ user.extra_titles | join(', ') }}" placeholder="Director of Online Learning">
+    <label>Minimum match score (0–50)</label>
+    <input type="number" name="min_score" min="0" max="50" value="{{ user.min_score }}">
+    <button type="submit">Save settings</button>
+  </form>
+</div>
+
+<div class="card">
+  <h2>Pipeline</h2>
+  {% if last_run %}
+    <p class="muted">Last run {{ last_run.ran_at.strftime('%Y-%m-%d %H:%M') }} UTC —
+      {{ last_run.fetched }} fetched → {{ last_run.in_range }} in range →
+      {{ last_run.relevant }} relevant → {{ last_run.new_count }} new.</p>
+  {% else %}
+    <p class="muted">Never run. The scheduler runs daily, or trigger one now.</p>
+  {% endif %}
+  <form method="post" action="/run"><button type="submit">Run job hunt now</button></form>
+</div>
+
+<div class="card">
+  <h2>Recent matches</h2>
+  {% include "_listings_table.html" %}
+  <p><a href="/listings">All listings →</a></p>
+</div>
+{% endblock %}

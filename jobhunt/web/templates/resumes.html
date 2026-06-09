@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Resumes — JobHunt{% endblock %}
+{% block content %}
+<h1>Resumes</h1>
+
+<div class="card">
+  <h2>Upload resumes</h2>
+  <p class="muted">PDF, DOCX, Markdown or plain text. Upload as many as you like —
+  skills, duties, certifications and job titles are extracted from each and merged
+  into one search profile.</p>
+  <form method="post" action="/resumes/upload" enctype="multipart/form-data">
+    <input type="file" name="files" multiple accept=".pdf,.docx,.md,.markdown,.txt" required>
+    <button type="submit">Upload &amp; extract</button>
+  </form>
+</div>
+
+{% for r in resumes %}
+<div class="card">
+  <h2>{{ r.filename }} <span class="muted">({{ r.uploaded_at.strftime('%Y-%m-%d') }})</span></h2>
+  <p><strong>Titles:</strong>
+    {% for t in r.parsed.get('titles', []) %}<span class="pill">{{ t }}</span>{% else %}<span class="muted">none</span>{% endfor %}</p>
+  <p><strong>Skills:</strong>
+    {% for s in r.parsed.get('skills', [])[:25] %}<span class="pill">{{ s }}</span>{% else %}<span class="muted">none</span>{% endfor %}
+    {% if r.parsed.get('skills', [])|length > 25 %}<span class="muted">+{{ r.parsed['skills']|length - 25 }} more</span>{% endif %}</p>
+  <p><strong>Certifications:</strong>
+    {% for c in r.parsed.get('certifications', []) %}<span class="pill">{{ c }}</span>{% else %}<span class="muted">none</span>{% endfor %}</p>
+  <p class="muted">{{ r.parsed.get('duties', [])|length }} duty bullets extracted.</p>
+  <form method="post" action="/resumes/{{ r.id }}/delete"
+        onsubmit="return confirm('Delete {{ r.filename }}?');">
+    <button class="secondary small" type="submit">Delete</button>
+  </form>
+</div>
+{% else %}
+<p class="muted">No resumes uploaded yet.</p>
+{% endfor %}
+{% endblock %}

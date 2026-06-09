@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}JobHunt{% endblock %}</title>
+  <style>
+    :root { --accent: #2563eb; --bg: #f8fafc; --card: #ffffff; --text: #0f172a; --muted: #64748b; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); }
+    nav { background: var(--card); border-bottom: 1px solid #e2e8f0; padding: 0.75rem 1.5rem; display: flex; gap: 1.25rem; align-items: center; }
+    nav .brand { font-weight: 700; color: var(--accent); text-decoration: none; font-size: 1.1rem; }
+    nav a { color: var(--text); text-decoration: none; }
+    nav a:hover { color: var(--accent); }
+    nav form { margin-left: auto; }
+    main { max-width: 960px; margin: 1.5rem auto; padding: 0 1rem; }
+    .card { background: var(--card); border: 1px solid #e2e8f0; border-radius: 10px; padding: 1.25rem; margin-bottom: 1.25rem; }
+    h1 { font-size: 1.4rem; } h2 { font-size: 1.1rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .bar { font-family: ui-monospace, monospace; font-size: 0.85rem; }
+    .pill { display: inline-block; background: #e0e7ff; color: #3730a3; border-radius: 999px; padding: 0.1rem 0.6rem; font-size: 0.8rem; margin: 0.1rem; }
+    .new-badge { background: #dcfce7; color: #166534; border-radius: 4px; padding: 0 0.4rem; font-size: 0.75rem; font-weight: 700; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid #f1f5f9; vertical-align: top; }
+    input, select, textarea { width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px; font: inherit; margin-bottom: 0.6rem; }
+    textarea { font-family: ui-monospace, monospace; font-size: 0.85rem; }
+    button { background: var(--accent); color: white; border: 0; border-radius: 6px; padding: 0.5rem 1rem; font: inherit; cursor: pointer; }
+    button.secondary { background: #e2e8f0; color: var(--text); }
+    button.small { padding: 0.2rem 0.6rem; font-size: 0.8rem; }
+    .inline { display: inline; } .inline button { margin-left: 0.25rem; }
+    a.job-link { color: var(--accent); }
+  </style>
+</head>
+<body>
+<nav>
+  <a class="brand" href="/">JobHunt</a>
+  {% if user is defined and user %}
+    <a href="/resumes">Resumes</a>
+    <a href="/sources">Sources</a>
+    <a href="/listings">Listings</a>
+    <a href="/reports/current">Working list</a>
+    <form method="post" action="/logout"><button class="secondary small">Log out ({{ user.email }})</button></form>
+  {% endif %}
+</nav>
+<main>
+{% block content %}{% endblock %}
+</main>
+</body>
+</html>

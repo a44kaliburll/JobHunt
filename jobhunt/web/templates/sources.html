@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Sources — JobHunt{% endblock %}
+{% block content %}
+<h1>Job sources</h1>
+
+<div class="card">
+  <h2>Built-in boards</h2>
+  <p>
+    <span class="pill">LinkedIn (guest search)</span>
+    <span class="pill">RemoteOK</span>
+    <span class="pill">WeWorkRemotely</span>
+    <span class="pill">The Muse</span>
+  </p>
+  <p class="muted">Always queried with your resume-derived titles and preferred locations.</p>
+</div>
+
+<div class="card">
+  <h2>Add a custom source</h2>
+  <p class="muted">Point JobHunt at any job site you care about: an RSS feed, a JSON
+  API, or an HTML page scraped with CSS selectors. <code>{query}</code> in the URL is
+  replaced with each search title, <code>{location}</code> with each location.</p>
+  <form method="post" action="/sources/add">
+    <input type="text" name="name" placeholder="Source name (e.g. NY State Jobs)" required>
+    <select name="kind">
+      <option value="rss">RSS / Atom feed</option>
+      <option value="json">JSON API</option>
+      <option value="html">HTML page (CSS selectors)</option>
+    </select>
+    <textarea name="config_json" rows="8" required placeholder='{"url": "https://example.com/jobs?q={query}", "selectors": {"item": "li.job", "title": ".job-title", "company": ".employer", "location": ".place", "url": "a"}}'></textarea>
+    <button type="submit">Add source</button>
+  </form>
+</div>
+
+{% for s in sources %}
+<div class="card">
+  <h2>{{ s.name }} <span class="pill">{{ s.kind }}</span>
+    {% if not s.enabled %}<span class="pill" style="background:#fee2e2;color:#991b1b;">disabled</span>{% endif %}</h2>
+  <pre class="muted" style="white-space: pre-wrap;">{{ s.config_json }}</pre>
+  <form class="inline" method="post" action="/sources/{{ s.id }}/toggle">
+    <button class="secondary small" type="submit">{{ 'Disable' if s.enabled else 'Enable' }}</button>
+  </form>
+  <form class="inline" method="post" action="/sources/{{ s.id }}/delete"
+        onsubmit="return confirm('Delete source {{ s.name }}?');">
+    <button class="secondary small" type="submit">Delete</button>
+  </form>
+</div>
+{% else %}
+<p class="muted">No custom sources yet.</p>
+{% endfor %}
+{% endblock %}

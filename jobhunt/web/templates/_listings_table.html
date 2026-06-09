@@ -1,0 +1,32 @@
+{% if listings %}
+<table>
+  <tr><th>Match</th><th>Title</th><th>Company</th><th>Location</th><th>Source</th><th>First seen</th><th></th></tr>
+  {% for l in listings %}
+  <tr>
+    <td class="bar">{{ match_bar(l.score) }}</td>
+    <td>
+      {% if l.is_new %}<span class="new-badge">NEW</span>{% endif %}
+      <a class="job-link" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.title }}</a>
+      {% if l.status %}<span class="pill">{{ l.status }}</span>{% endif %}
+    </td>
+    <td>{{ l.company }}</td>
+    <td>{{ l.location }}</td>
+    <td>{{ l.source }}</td>
+    <td>{{ l.first_seen }}</td>
+    <td>
+      <form class="inline" method="post" action="/listings/{{ l.id }}/status">
+        <select name="status" onchange="this.form.submit()" style="width:auto; margin:0;">
+          <option value="" {% if not l.status %}selected{% endif %}>—</option>
+          <option value="saved" {% if l.status == 'saved' %}selected{% endif %}>saved</option>
+          <option value="applied" {% if l.status == 'applied' %}selected{% endif %}>applied</option>
+          <option value="rejected" {% if l.status == 'rejected' %}selected{% endif %}>rejected</option>
+          <option value="hidden">hide</option>
+        </select>
+      </form>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% else %}
+<p class="muted">No listings yet.</p>
+{% endif %}
