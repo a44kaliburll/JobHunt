@@ -4,7 +4,8 @@ __pycache__/
 .venv/
 venv/
 .pytest_cache/
-data/
+# Anchored: the Python app's runtime data dir, NOT Kotlin packages named "data".
+/data/
 *.db
 *.sqlite3
 .env
