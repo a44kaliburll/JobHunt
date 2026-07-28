@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">JobHunt</string>
+
+    <string name="notification_channel_matches">New job matches</string>
+    <string name="notification_channel_matches_description">
+        Notifies you when a scheduled hunt finds jobs that match your resumes.
+    </string>
+
+    <plurals name="notification_new_matches">
+        <item quantity="one">%d new job match</item>
+        <item quantity="other">%d new job matches</item>
+    </plurals>
+</resources>

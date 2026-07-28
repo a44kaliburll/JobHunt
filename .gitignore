@@ -10,3 +10,13 @@ data/
 .env
 dist/
 build/
+
+# Android / Gradle
+android/**/build/
+.gradle/
+local.properties
+*.apk
+*.aab
+.idea/
+*.iml
+captures/

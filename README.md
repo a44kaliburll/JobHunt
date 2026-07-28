@@ -1,35 +1,35 @@
 # JobHunt
 
-Self-hosted, multi-user job hunt automation. Upload as many resumes as you
-like, let JobHunt extract your **skills, duties, certifications, and job
-titles**, and it will scrape matching jobs from popular job boards — plus any
-job site you add yourself — on a daily schedule.
+An Android app that turns your resumes into a job search that runs itself.
 
-JobHunt is a generalized, anyone-can-run version of a personal
-`artex_job_hunt` cron pipeline: a deterministic (no LLM, no API keys)
-scrape → score → dedupe → digest loop.
+Add as many resumes as you like. JobHunt reads them, extracts your **skills,
+duties, certifications, and job titles**, and then uses exactly those to search
+popular job boards — plus any job site you add yourself — every day in the
+background, scoring and deduping what it finds.
+
+Everything happens on your phone. No account, no server, no API keys, no LLM:
+the whole pipeline is deterministic, which makes it free to run and identical
+every time.
 
 ## How it works
 
 ```
-resumes (PDF/DOCX/MD/TXT)
+resumes (PDF / DOCX / Markdown / TXT)
    │  parse: skills, duties, certifications, titles
    ▼
 search profile ──► queries (title × location) fanned out to:
                      • LinkedIn (guest search)   • RemoteOK
                      • WeWorkRemotely            • The Muse
-                     • + your custom sources (RSS / JSON API / HTML)
+                     • + your own sites (RSS / JSON API / HTML)
    ▼
 funnel: fetched → in range (location) → relevant (score ≥ threshold) → new
    ▼
-listings DB (dedupe by source:id, 90-day retention)
+Room database (dedupe by source:id, 90-day retention)
    ▼
-reports/<user>/YYYY-MM-DD.md   ← daily digest (funnel, TL;DR, top matches)
-reports/<user>/current_listings.md  ← rolling working list with NEW markers
+notification for new matches + shareable Markdown digests
 ```
 
-Every listing gets a deterministic match score out of 50, rendered as
-`[████░░░░░░] 38% (19/50)`:
+Every listing is scored out of 50 and shown as a match meter:
 
 | Component | Max | Based on |
 |---|---|---|
@@ -38,49 +38,66 @@ Every listing gets a deterministic match score out of 50, rendered as
 | Duties | 10 | shared vocabulary between your experience bullets and the description |
 | Certifications | 5 | any of your certs mentioned |
 
-## Quick start
+The daily background run is handled by WorkManager, so it survives reboots and
+respects Doze. You choose the hour, and whether it should wait for Wi-Fi.
+
+## Building the app
+
+Requires JDK 17 and the Android SDK (Android Studio Koala or newer).
 
 ```bash
-git clone <this repo> && cd JobHunt
-python3 -m venv .venv && .venv/bin/pip install -e ".[dev]"
-
-# Web UI (register, upload resumes, add sources, run, browse matches)
-.venv/bin/jobhunt serve            # http://127.0.0.1:8000
-
-# Or do everything from the CLI
-.venv/bin/jobhunt add-user you@example.com --locations "Albany, NY, Remote"
-.venv/bin/jobhunt upload-resume you@example.com resume.pdf old_resume.docx
-.venv/bin/jobhunt run --email you@example.com
-cat data/reports/1/current_listings.md
+git clone https://github.com/a44kaliburll/JobHunt.git
+cd JobHunt/android
+./gradlew :app:assembleDebug
+# APK lands in app/build/outputs/apk/debug/
 ```
 
-### Scheduling (emulating the original cron)
+Or just open the `android/` folder in Android Studio and hit Run.
 
-Either keep the built-in scheduler running (daily at 07:00 by default):
+Minimum Android 8.0 (API 26); targets Android 14 (API 34).
+
+## Project layout
+
+The logic that matters is deliberately kept out of the Android layer, in a
+plain Kotlin module that runs — and is tested — on any JVM:
+
+```
+android/
+├── core/                        # pure Kotlin, no Android APIs, 42 unit tests
+│   └── src/main/kotlin/com/jobhunt/core/
+│       ├── ResumeParser.kt      # skills, duties, certs, titles from resume text
+│       ├── Taxonomy.kt          # cross-industry skill + certification vocabulary
+│       ├── Matching.kt          # query fan-out and 0–50 scoring
+│       ├── Pipeline.kt          # scrape → score → dedupe → retention
+│       ├── Reports.kt           # Markdown digest + working list
+│       ├── ResumeText.kt        # DOCX / plain-text extraction
+│       └── scrapers/            # built-in boards + user-defined source engine
+└── app/                         # Android: Room, WorkManager, Compose UI
+    └── src/main/java/com/jobhunt/android/
+        ├── data/                # Room entities, DAOs, settings
+        ├── resume/              # PDF extraction (PDFBox-Android)
+        ├── work/                # daily worker + scheduler
+        └── ui/                  # Compose screens
+```
 
 ```bash
-jobhunt schedule
-```
-
-…or use a real crontab, which runs the identical pipeline:
-
-```cron
-0 7 * * * cd /path/to/JobHunt && .venv/bin/jobhunt run
+cd android/core && ./gradlew test    # core logic, no Android SDK needed
+cd android      && ./gradlew :app:testDebugUnitTest
 ```
 
 ## Adding your own job sites
 
-Any user can add custom sources in the web UI (**Sources**) — no code needed.
-`{query}` is replaced with each search title and `{location}` with each
-preferred location.
+In the **Sources** tab, point JobHunt at any board. `{query}` is replaced with
+each of your search titles, `{location}` with each of your locations. A URL
+without `{query}` is fetched once per run and filtered locally.
 
-**RSS/Atom feed**
+**RSS / Atom feed**
 
 ```json
 {"url": "https://example.com/jobs.rss?q={query}"}
 ```
 
-**JSON API** (dot-paths into the response)
+**JSON API** — `list_path` finds the array, `fields` maps with dot-paths
 
 ```json
 {
@@ -93,7 +110,7 @@ preferred location.
 }
 ```
 
-**HTML page** (CSS selectors)
+**HTML page** — CSS selectors
 
 ```json
 {
@@ -105,45 +122,34 @@ preferred location.
 }
 ```
 
-If the URL has no `{query}` placeholder, the source is fetched once per run
-and filtered against your keywords locally.
+## Desktop / server mode (optional)
 
-## Configuration
-
-All optional, via environment variables:
-
-| Variable | Default | Purpose |
-|---|---|---|
-| `JOBHUNT_DATA_DIR` | `data/` | DB, uploads, reports |
-| `JOBHUNT_DATABASE_URL` | sqlite in data dir | any SQLAlchemy URL |
-| `JOBHUNT_RETENTION_DAYS` | `90` | listing retention |
-| `JOBHUNT_MIN_SCORE` | `6` | default relevance threshold (0–50) |
-| `JOBHUNT_SCHEDULE_HOUR` / `_MINUTE` | `7` / `0` | daily run time |
-| `JOBHUNT_SECRET_KEY` | auto-generated | session cookie signing |
-
-## Development
+The repository also contains the original Python implementation of the same
+pipeline, for running it headless on a machine you control — as a cron job, or
+as a small multi-user web app. It is independent of the Android app; use
+whichever fits.
 
 ```bash
-.venv/bin/python -m pytest        # 19 tests: parser, scoring, scrapers, pipeline
+python3 -m venv .venv && .venv/bin/pip install -e ".[dev]"
+.venv/bin/jobhunt add-user you@example.com --locations "Albany, NY, Remote"
+.venv/bin/jobhunt upload-resume you@example.com resume.pdf
+.venv/bin/jobhunt run
+.venv/bin/jobhunt serve          # web UI on http://127.0.0.1:8000
 ```
 
-Project layout:
+```cron
+0 7 * * * cd /path/to/JobHunt && .venv/bin/jobhunt run
+```
 
-```
-jobhunt/
-├── resume/        # text extraction (pdf/docx/md/txt) + deterministic parser
-├── scrapers/      # built-in boards + user-defined source engine
-├── matching.py    # query fan-out + 0–50 scoring
-├── pipeline.py    # scrape → score → dedupe → retention → reports
-├── reports.py     # daily digest + current_listings.md (artex format)
-├── scheduler.py   # daily APScheduler loop
-├── web/           # FastAPI UI (accounts, uploads, sources, listings)
-└── cli.py         # init-db / add-user / upload-resume / run / serve / schedule
-```
+See `jobhunt/` for that implementation; `pytest -q` runs its 19 tests.
 
 ## A note on scraping
 
-JobHunt only uses public, logged-out endpoints and fetches at a gentle,
-once-a-day cadence. Job boards change their markup and rate-limit
-aggressively; individual scrapers fail soft (a warning in the digest) so one
-broken board never kills your run. Respect each site's terms of service.
+JobHunt uses public, logged-out endpoints and fetches once a day at a gentle
+pace. Boards change their markup and rate-limit aggressively, so each scraper
+fails soft — a broken board becomes a warning in the digest instead of killing
+the run. Respect each site's terms of service.
+
+## License
+
+MIT
