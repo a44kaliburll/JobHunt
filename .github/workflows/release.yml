@@ -4,8 +4,13 @@ on:
   push:
     tags: ["v*"]
   workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag to create and release, e.g. v0.1.0. Leave blank to only build the APK."
+        required: false
+        default: ""
 
-# Required for the job to create a GitHub Release.
+# Required for the job to create a tag and a GitHub Release.
 permissions:
   contents: write
 
@@ -33,11 +38,27 @@ jobs:
         working-directory: android
         run: ./gradlew :app:assembleDebug
 
+      # A tag push releases itself; a manual run releases only when given a
+      # tag, so a dispatch can never publish a release named after a branch.
+      - name: Decide the release tag
+        id: rel
+        env:
+          INPUT_TAG: ${{ inputs.tag }}
+        run: |
+          if [ "${GITHUB_EVENT_NAME}" = "push" ]; then
+            echo "tag=${GITHUB_REF_NAME}" >> "$GITHUB_OUTPUT"
+          else
+            echo "tag=${INPUT_TAG}" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Stage the APK under a release name
+        env:
+          TAG: ${{ steps.rel.outputs.tag }}
         run: |
           mkdir -p dist
+          name="${TAG:-$(git rev-parse --short HEAD)}"
           cp android/app/build/outputs/apk/debug/app-debug.apk \
-             "dist/jobhunt-${GITHUB_REF_NAME}-debug.apk"
+             "dist/jobhunt-${name}-debug.apk"
           ls -lh dist/
 
       - uses: actions/upload-artifact@v4
@@ -45,15 +66,15 @@ jobs:
           name: jobhunt-apk
           path: dist/*.apk
 
-      # Only a tag push produces a release; a manual run just leaves the
-      # artifact above, so it can't publish a release named after a branch.
       - name: Publish the release
-        if: startsWith(github.ref, 'refs/tags/')
+        if: steps.rel.outputs.tag != ''
         env:
           GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.rel.outputs.tag }}
         run: |
-          gh release create "$GITHUB_REF_NAME" dist/*.apk \
-            --title "JobHunt $GITHUB_REF_NAME" \
+          gh release create "$TAG" dist/*.apk \
+            --target "$GITHUB_SHA" \
+            --title "JobHunt $TAG" \
             --notes "$(cat <<'NOTES'
           ## Install
 
