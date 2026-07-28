@@ -30,7 +30,15 @@ class JobHuntSchedulerTest {
     @Test
     fun `an out-of-range hour is clamped instead of throwing`() {
         val now = LocalDateTime.of(2026, 6, 9, 12, 0)
-        assertEquals(12 * 60, JobHuntScheduler.delayUntilNextRun(hour = 99, now = now).toMinutes())
-        assertEquals(12 * 60, JobHuntScheduler.delayUntilNextRun(hour = -5, now = now).toMinutes())
+        // 99 clamps to 23:00, still ahead of noon today.
+        assertEquals(
+            11 * 60,
+            JobHuntScheduler.delayUntilNextRun(hour = 99, now = now).toMinutes(),
+        )
+        // -5 clamps to 00:00, which is behind noon, so it lands on tomorrow.
+        assertEquals(
+            12 * 60,
+            JobHuntScheduler.delayUntilNextRun(hour = -5, now = now).toMinutes(),
+        )
     }
 }
