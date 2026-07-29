@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.WorkOutline
 import androidx.compose.material3.Icon
@@ -51,6 +52,7 @@ private enum class Screen(
 ) {
     Dashboard("dashboard", "Home", Icons.Filled.Home),
     Listings("listings", "Matches", Icons.Filled.WorkOutline),
+    Profile("profile", "Profile", Icons.Filled.Person),
     Resumes("resumes", "Resumes", Icons.Filled.Description),
     Sources("sources", "Sources", Icons.Filled.Public),
 }
@@ -115,10 +117,11 @@ private fun JobHuntApp(viewModel: JobHuntViewModel = viewModel()) {
                 DashboardScreen(
                     viewModel = viewModel,
                     onSeeAllMatches = { navController.navigate(Screen.Listings.route) },
-                    onAddResume = { navController.navigate(Screen.Resumes.route) },
+                    onEditProfile = { navController.navigate(Screen.Profile.route) },
                 )
             }
             composable(Screen.Listings.route) { ListingsScreen(viewModel) }
+            composable(Screen.Profile.route) { ProfileScreen(viewModel) }
             composable(Screen.Resumes.route) { ResumesScreen(viewModel) }
             composable(Screen.Sources.route) { SourcesScreen(viewModel) }
         }

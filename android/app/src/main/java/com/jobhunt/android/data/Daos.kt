@@ -24,6 +24,27 @@ interface ResumeDao {
 }
 
 @Dao
+interface ProfileItemDao {
+    @Query("SELECT * FROM profile_items ORDER BY createdAt ASC, id ASC")
+    fun observeAll(): Flow<List<ProfileItemEntity>>
+
+    @Query("SELECT * FROM profile_items ORDER BY createdAt ASC, id ASC")
+    suspend fun getAll(): List<ProfileItemEntity>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun upsert(item: ProfileItemEntity)
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insertAll(items: List<ProfileItemEntity>)
+
+    @Query("DELETE FROM profile_items WHERE field = :field AND normalized = :normalized")
+    suspend fun delete(field: String, normalized: String)
+
+    @Query("SELECT COUNT(*) FROM profile_items")
+    suspend fun count(): Int
+}
+
+@Dao
 interface JobSourceDao {
     @Query("SELECT * FROM job_sources ORDER BY createdAt DESC")
     fun observeAll(): Flow<List<JobSourceEntity>>

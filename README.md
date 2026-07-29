@@ -14,9 +14,10 @@ every time.
 ## How it works
 
 ```
-resumes (PDF / DOCX / Markdown / TXT)
-   │  parse: skills, duties, certifications, titles
-   ▼
+resumes (PDF / DOCX / Markdown / TXT)   your own entries, typed in
+   │  parse: skills, duties, certs, titles      │  added / removed by hand
+   └──────────────────────┬─────────────────────┘
+                          ▼
 search profile ──► queries (title × location) fanned out to:
                      • LinkedIn (guest search)   • RemoteOK
                      • WeWorkRemotely            • The Muse
@@ -41,6 +42,23 @@ Every listing is scored out of 50 and shown as a match meter:
 The daily background run is handled by WorkManager, so it survives reboots and
 respects Doze. You choose the hour, and whether it should wait for Wi-Fi.
 
+## Your profile is editable
+
+Resumes are a shortcut, not a requirement. The **Profile** tab is the real
+input, and everything in it can be edited by hand:
+
+- **Add** job titles, skills, certifications, or experience bullets directly —
+  you never have to upload a document.
+- **Remove** anything irrelevant. Old roles and stray skills stop generating
+  searches and stop counting toward match scores.
+- Add the titles you want *next*, not only the ones you have held. Titles are
+  what the job boards are actually queried with.
+
+Your edits are stored as a separate layer on top of the parsed resumes, so
+adding, replacing, or deleting a resume never discards them. Entries removed
+from a resume are suppressed rather than destroyed — the Profile tab lists them
+under "Show removed", and one tap puts them back.
+
 ## Building the app
 
 Requires JDK 17 and the Android SDK (Android Studio Koala or newer).
@@ -63,9 +81,10 @@ plain Kotlin module that runs — and is tested — on any JVM:
 
 ```
 android/
-├── core/                        # pure Kotlin, no Android APIs, 42 unit tests
+├── core/                        # pure Kotlin, no Android APIs, 55 unit tests
 │   └── src/main/kotlin/com/jobhunt/core/
 │       ├── ResumeParser.kt      # skills, duties, certs, titles from resume text
+│       ├── ProfileBuilder.kt    # parsed resumes + hand edits -> search profile
 │       ├── Taxonomy.kt          # cross-industry skill + certification vocabulary
 │       ├── Matching.kt          # query fan-out and 0–50 scoring
 │       ├── Pipeline.kt          # scrape → score → dedupe → retention

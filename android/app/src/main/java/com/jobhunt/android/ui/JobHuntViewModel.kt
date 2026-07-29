@@ -13,6 +13,8 @@ import com.jobhunt.android.data.toCsvList
 import com.jobhunt.android.work.JobHuntScheduler
 import com.jobhunt.core.HuntSettings
 import com.jobhunt.core.MAX_SCORE
+import com.jobhunt.core.ProfileField
+import com.jobhunt.core.ProfileItem
 import com.jobhunt.core.ResumeJson
 import com.jobhunt.core.SearchProfile
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -39,6 +41,8 @@ class JobHuntViewModel(application: Application) : AndroidViewModel(application)
         repository.lastRun.stateInDefault(null)
     val profile: StateFlow<SearchProfile> =
         repository.profile.stateInDefault(SearchProfile())
+    val profileItems: StateFlow<Map<ProfileField, List<ProfileItem>>> =
+        repository.profileItems.stateInDefault(emptyMap())
     val isRunning: StateFlow<Boolean> =
         JobHuntScheduler.observeRunning(app).stateInDefault(false)
 
@@ -73,12 +77,26 @@ class JobHuntViewModel(application: Application) : AndroidViewModel(application)
 
     fun parsedOf(resume: ResumeEntity) = ResumeJson.decode(resume.parsedJson)
 
+    // --- editing the profile by hand ---
+
+    fun addProfileItem(field: ProfileField, value: String) = viewModelScope.launch {
+        val error = repository.addProfileItem(field, value)
+        _message.value = error ?: "Added to ${field.label.lowercase()}."
+    }
+
+    fun hideProfileItem(field: ProfileField, value: String) = viewModelScope.launch {
+        repository.hideProfileItem(field, value)
+    }
+
+    fun restoreProfileItem(field: ProfileField, value: String) = viewModelScope.launch {
+        repository.restoreProfileItem(field, value)
+    }
+
     // --- settings ---
 
-    fun updateSettings(locations: String, extraTitles: String, minScore: Int) {
+    fun updateSettings(locations: String, minScore: Int) {
         val updated = HuntSettings(
             locations = locations.toCsvList(),
-            extraTitles = extraTitles.toCsvList(),
             minScore = minScore.coerceIn(0, MAX_SCORE),
             retentionDays = settingsStore.settings.retentionDays,
         )

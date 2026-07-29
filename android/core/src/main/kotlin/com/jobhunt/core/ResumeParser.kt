@@ -108,17 +108,8 @@ object ResumeParser {
         )
     }
 
-    /** Merge several parsed resumes into the one profile that drives the hunt. */
-    fun mergeProfiles(
-        resumes: List<ParsedResume>,
-        extraTitles: List<String> = emptyList(),
-    ): SearchProfile = SearchProfile(
-        skills = dedupeKeepOrder(resumes.flatMap { it.skills }),
-        duties = dedupeKeepOrder(resumes.flatMap { it.duties }),
-        certifications = dedupeKeepOrder(resumes.flatMap { it.certifications }),
-        titles = dedupeKeepOrder(resumes.flatMap { it.titles } + extraTitles),
-        summary = resumes.firstOrNull { it.summary.isNotBlank() }?.summary.orEmpty(),
-    )
+    // Several resumes are merged with the user's own edits by [ProfileBuilder],
+    // which is the single place a search profile is assembled.
 
     // --- internals ---
 

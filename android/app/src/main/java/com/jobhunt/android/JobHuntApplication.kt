@@ -8,6 +8,10 @@ import com.jobhunt.android.data.JobHuntDatabase
 import com.jobhunt.android.data.SettingsStore
 import com.jobhunt.android.work.JobHuntScheduler
 import com.tom_roush.pdfbox.android.PDFBoxResourceLoader
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.launch
 
 class JobHuntApplication : Application() {
 
@@ -17,6 +21,8 @@ class JobHuntApplication : Application() {
         JobHuntRepository(this, database, settingsStore)
     }
 
+    private val appScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
+
     override fun onCreate() {
         super.onCreate()
         // PDFBox-Android loads its font resources from assets at first use.
@@ -25,6 +31,7 @@ class JobHuntApplication : Application() {
         if (settingsStore.dailyRunEnabled) {
             JobHuntScheduler.scheduleDaily(this, settingsStore)
         }
+        appScope.launch { repository.migrateLegacyExtraTitles() }
     }
 
     private fun createNotificationChannel() {

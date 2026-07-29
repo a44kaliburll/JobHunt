@@ -79,14 +79,11 @@ class ResumeParserTest {
     }
 
     @Test
-    fun `merging resumes dedupes and appends extra titles`() {
+    fun `the same resume twice does not double up the profile`() {
         val parsed = ResumeParser.parse(SAMPLE)
-        val merged = ResumeParser.mergeProfiles(
-            listOf(parsed, parsed),
-            extraTitles = listOf("Director of Teaching and Learning"),
-        )
+        val merged = ProfileBuilder.build(listOf(parsed, parsed), emptyList())
+
         assertEquals(1, merged.titles.count { it == "Director of Online Learning" })
-        assertContains(merged.titles, "Director of Teaching and Learning")
         assertEquals(
             merged.skills.size,
             merged.skills.map { it.lowercase() }.toSet().size,
@@ -96,7 +93,7 @@ class ResumeParserTest {
 
     @Test
     fun `an empty resume yields an empty profile`() {
-        val profile = ResumeParser.mergeProfiles(listOf(ResumeParser.parse("")))
+        val profile = ProfileBuilder.build(listOf(ResumeParser.parse("")), emptyList())
         assertTrue(profile.isEmpty)
     }
 }

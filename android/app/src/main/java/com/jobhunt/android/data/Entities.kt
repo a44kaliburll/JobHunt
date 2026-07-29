@@ -4,6 +4,8 @@ import androidx.room.Entity
 import androidx.room.Index
 import androidx.room.PrimaryKey
 import com.jobhunt.core.Listing
+import com.jobhunt.core.ProfileEdit
+import com.jobhunt.core.ProfileField
 
 @Entity(tableName = "resumes")
 data class ResumeEntity(
@@ -14,6 +16,31 @@ data class ResumeEntity(
     val parsedJson: String,
     val uploadedAt: Long = System.currentTimeMillis(),
 )
+
+/**
+ * One hand-made change to the profile: either an entry the user typed in, or a
+ * suppression of an entry that came out of a resume. Kept separate from the
+ * parsed resumes so re-uploading a document never discards curation.
+ */
+@Entity(
+    tableName = "profile_items",
+    indices = [Index(value = ["field", "normalized"], unique = true)],
+)
+data class ProfileItemEntity(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    /** [com.jobhunt.core.ProfileField.key] */
+    val field: String,
+    val value: String,
+    /** Lower-cased, trimmed [value]; the identity used for matching. */
+    val normalized: String,
+    val hidden: Boolean,
+    val createdAt: Long = System.currentTimeMillis(),
+) {
+    fun toCore(): ProfileEdit? {
+        val profileField = ProfileField.fromKey(field) ?: return null
+        return ProfileEdit(profileField, value, hidden)
+    }
+}
 
 @Entity(tableName = "job_sources")
 data class JobSourceEntity(

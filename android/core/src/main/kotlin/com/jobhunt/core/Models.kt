@@ -54,7 +54,6 @@ data class SearchProfile(
 
 data class HuntSettings(
     val locations: List<String> = emptyList(),
-    val extraTitles: List<String> = emptyList(),
     val minScore: Int = DEFAULT_MIN_SCORE,
     val retentionDays: Int = RETENTION_DAYS,
 )

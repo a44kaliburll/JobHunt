@@ -35,7 +35,7 @@ import java.util.Locale
 fun DashboardScreen(
     viewModel: JobHuntViewModel,
     onSeeAllMatches: () -> Unit,
-    onAddResume: () -> Unit,
+    onEditProfile: () -> Unit,
 ) {
     val profile by viewModel.profile.collectAsStateWithLifecycle()
     val settings by viewModel.settings.collectAsStateWithLifecycle()
@@ -56,30 +56,34 @@ fun DashboardScreen(
 
         item {
             SectionCard("Your profile") {
-                if (resumes.isEmpty()) {
+                if (profile.isEmpty) {
                     EmptyState(
-                        "No resumes yet. Everything — the searches that run and how " +
-                            "matches are scored — is built from your resumes.",
+                        "Nothing to search on yet. Add job titles and skills by " +
+                            "hand, or upload a resume to fill them in quickly.",
                     )
-                    Button(onClick = onAddResume, modifier = Modifier.padding(top = 10.dp)) {
-                        Text("Add a resume")
-                    }
                 } else {
                     Text(
-                        "Merged from ${resumes.size} resume" +
-                            if (resumes.size == 1) "" else "s",
+                        if (resumes.isEmpty()) {
+                            "Built entirely from entries you added."
+                        } else {
+                            "From ${resumes.size} resume" +
+                                (if (resumes.size == 1) "" else "s") + ", plus your edits."
+                        },
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
-                    LabeledChips("Search titles", profile.titles, "none detected")
-                    LabeledChips("Skills", profile.skills, "none detected")
-                    LabeledChips("Certifications", profile.certifications, "none detected")
+                    LabeledChips("Search titles", profile.titles, "none yet")
+                    LabeledChips("Skills", profile.skills, "none yet")
+                    LabeledChips("Certifications", profile.certifications, "none yet")
                     Text(
-                        "${profile.duties.size} experience bullets captured for duty matching.",
+                        "${profile.duties.size} experience bullets used for duty matching.",
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                         modifier = Modifier.padding(top = 8.dp),
                     )
+                }
+                Button(onClick = onEditProfile, modifier = Modifier.padding(top = 10.dp)) {
+                    Text(if (profile.isEmpty) "Build your profile" else "Edit profile")
                 }
             }
         }
@@ -88,9 +92,6 @@ fun DashboardScreen(
             SectionCard("Where to look") {
                 var locations by remember(settings) {
                     mutableStateOf(settings.locations.joinToString(", "))
-                }
-                var extraTitles by remember(settings) {
-                    mutableStateOf(settings.extraTitles.joinToString(", "))
                 }
                 var minScore by remember(settings) { mutableIntStateOf(settings.minScore) }
 
@@ -102,12 +103,11 @@ fun DashboardScreen(
                     modifier = Modifier.fillMaxWidth(),
                     singleLine = false,
                 )
-                OutlinedTextField(
-                    value = extraTitles,
-                    onValueChange = { extraTitles = it },
-                    label = { Text("Extra job titles to search") },
-                    placeholder = { Text("Director of Online Learning") },
-                    modifier = Modifier.fillMaxWidth().padding(top = 8.dp),
+                Text(
+                    "Job titles live in the Profile tab.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(top = 6.dp),
                 )
                 Text(
                     "Minimum match score: $minScore / $MAX_SCORE",
@@ -120,11 +120,9 @@ fun DashboardScreen(
                     valueRange = 0f..MAX_SCORE.toFloat(),
                     steps = MAX_SCORE - 1,
                 )
-                Button(
-                    onClick = {
-                        viewModel.updateSettings(locations, extraTitles, minScore)
-                    },
-                ) { Text("Save") }
+                Button(onClick = { viewModel.updateSettings(locations, minScore) }) {
+                    Text("Save")
+                }
             }
         }
 

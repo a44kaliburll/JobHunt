@@ -18,16 +18,24 @@ class SettingsStore(context: Context) {
     var settings: HuntSettings
         get() = HuntSettings(
             locations = prefs.getString(KEY_LOCATIONS, "").orEmpty().toCsvList(),
-            extraTitles = prefs.getString(KEY_EXTRA_TITLES, "").orEmpty().toCsvList(),
             minScore = prefs.getInt(KEY_MIN_SCORE, DEFAULT_MIN_SCORE),
             retentionDays = prefs.getInt(KEY_RETENTION, RETENTION_DAYS),
         )
         set(value) = prefs.edit {
             putString(KEY_LOCATIONS, value.locations.joinToString(", "))
-            putString(KEY_EXTRA_TITLES, value.extraTitles.joinToString(", "))
             putInt(KEY_MIN_SCORE, value.minScore)
             putInt(KEY_RETENTION, value.retentionDays)
         }
+
+    /**
+     * Titles from the old settings field, before job titles moved into the
+     * editable profile. Read once at startup so they are carried over rather
+     * than silently dropped.
+     */
+    val legacyExtraTitles: List<String>
+        get() = prefs.getString(KEY_EXTRA_TITLES, "").orEmpty().toCsvList()
+
+    fun clearLegacyExtraTitles() = prefs.edit { remove(KEY_EXTRA_TITLES) }
 
     var dailyRunEnabled: Boolean
         get() = prefs.getBoolean(KEY_DAILY_ENABLED, true)

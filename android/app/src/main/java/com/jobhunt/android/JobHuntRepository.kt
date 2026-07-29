@@ -5,6 +5,7 @@ import android.net.Uri
 import com.jobhunt.android.data.JobHuntDatabase
 import com.jobhunt.android.data.JobSourceEntity
 import com.jobhunt.android.data.ListingEntity
+import com.jobhunt.android.data.ProfileItemEntity
 import com.jobhunt.android.data.ResumeEntity
 import com.jobhunt.android.data.RunLogEntity
 import com.jobhunt.android.data.SettingsStore
@@ -12,18 +13,25 @@ import com.jobhunt.android.data.toEntity
 import com.jobhunt.android.resume.AndroidResumeReader
 import com.jobhunt.core.CustomSource
 import com.jobhunt.core.OkHttpFetcher
+import com.jobhunt.core.ParsedResume
 import com.jobhunt.core.Pipeline
+import com.jobhunt.core.ProfileBuilder
+import com.jobhunt.core.ProfileEdit
+import com.jobhunt.core.ProfileField
+import com.jobhunt.core.ProfileItem
 import com.jobhunt.core.Reports
 import com.jobhunt.core.ResumeJson
 import com.jobhunt.core.ResumeParser
 import com.jobhunt.core.RunResult
 import com.jobhunt.core.SearchProfile
+import com.jobhunt.core.normalizedForProfile
 import java.io.File
 import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
 
@@ -46,14 +54,113 @@ class JobHuntRepository(
     val listings: Flow<List<ListingEntity>> = database.listingDao().observeVisible()
     val lastRun: Flow<RunLogEntity?> = database.runLogDao().observeLatest()
 
-    /** The merged profile driving queries and scoring, recomputed on demand. */
-    val profile: Flow<SearchProfile> = resumes.map { rows -> mergeProfile(rows) }
+    private val parsedResumes: Flow<List<ParsedResume>> =
+        resumes.map { rows -> rows.map { ResumeJson.decode(it.parsedJson) } }
+    private val profileEdits: Flow<List<ProfileEdit>> =
+        database.profileItemDao().observeAll()
+            .map { rows -> rows.mapNotNull(ProfileItemEntity::toCore) }
 
-    private fun mergeProfile(rows: List<ResumeEntity>): SearchProfile =
-        ResumeParser.mergeProfiles(
-            rows.map { ResumeJson.decode(it.parsedJson) },
-            settingsStore.settings.extraTitles,
+    /** The profile the hunt runs on: resume-derived items plus the user's edits. */
+    val profile: Flow<SearchProfile> =
+        combine(parsedResumes, profileEdits) { resumes, edits ->
+            ProfileBuilder.build(resumes, edits)
+        }
+
+    /** Every profile entry per field, hidden ones included, for the editor. */
+    val profileItems: Flow<Map<ProfileField, List<ProfileItem>>> =
+        combine(parsedResumes, profileEdits) { resumes, edits ->
+            ProfileField.entries.associateWith { ProfileBuilder.items(it, resumes, edits) }
+        }
+
+    // --- editing the profile by hand ---
+
+    private suspend fun currentResumes(): List<ParsedResume> =
+        database.resumeDao().getAll().map { ResumeJson.decode(it.parsedJson) }
+
+    private suspend fun currentEdits(): List<ProfileEdit> =
+        database.profileItemDao().getAll().mapNotNull(ProfileItemEntity::toCore)
+
+    /** True when a value is present in the resumes themselves. */
+    private fun fromResume(
+        field: ProfileField,
+        normalized: String,
+        resumes: List<ParsedResume>,
+    ): Boolean = ProfileBuilder.items(field, resumes, emptyList())
+        .any { it.value.normalizedForProfile() == normalized }
+
+    /** Add an entry by hand. Returns an error message, or null on success. */
+    suspend fun addProfileItem(field: ProfileField, rawValue: String): String? =
+        withContext(Dispatchers.IO) {
+            val resumes = currentResumes()
+            val edits = currentEdits()
+            ProfileBuilder.rejectionReason(field, rawValue, resumes, edits)
+                ?.let { return@withContext it }
+
+            val value = rawValue.trim()
+            val normalized = value.normalizedForProfile()
+            // Clear any suppression first: re-adding a hidden entry restores it.
+            database.profileItemDao().delete(field.key, normalized)
+            if (!fromResume(field, normalized, resumes)) {
+                database.profileItemDao().upsert(
+                    ProfileItemEntity(
+                        field = field.key,
+                        value = value,
+                        normalized = normalized,
+                        hidden = false,
+                    ),
+                )
+            }
+            null
+        }
+
+    /**
+     * Drop an entry from the hunt. A hand-typed entry is deleted outright; one
+     * that came from a resume is suppressed, so it can be restored later.
+     */
+    suspend fun hideProfileItem(field: ProfileField, rawValue: String) =
+        withContext(Dispatchers.IO) {
+            val value = rawValue.trim()
+            val normalized = value.normalizedForProfile()
+            val resumes = currentResumes()
+            database.profileItemDao().delete(field.key, normalized)
+            if (fromResume(field, normalized, resumes)) {
+                database.profileItemDao().upsert(
+                    ProfileItemEntity(
+                        field = field.key,
+                        value = value,
+                        normalized = normalized,
+                        hidden = true,
+                    ),
+                )
+            }
+            Unit
+        }
+
+    /** Bring a suppressed resume entry back. */
+    suspend fun restoreProfileItem(field: ProfileField, rawValue: String) =
+        withContext(Dispatchers.IO) {
+            database.profileItemDao().delete(field.key, rawValue.normalizedForProfile())
+        }
+
+    /**
+     * Carries titles from the old "extra search titles" setting into the
+     * profile editor, once, so upgrading does not quietly lose them.
+     */
+    suspend fun migrateLegacyExtraTitles() = withContext(Dispatchers.IO) {
+        val legacy = settingsStore.legacyExtraTitles
+        if (legacy.isEmpty()) return@withContext
+        database.profileItemDao().insertAll(
+            legacy.map { title ->
+                ProfileItemEntity(
+                    field = ProfileField.TITLES.key,
+                    value = title,
+                    normalized = title.normalizedForProfile(),
+                    hidden = false,
+                )
+            },
         )
+        settingsStore.clearLegacyExtraTitles()
+    }
 
     // --- resumes ---
 
@@ -117,7 +224,7 @@ class JobHuntRepository(
     suspend fun runHunt(today: LocalDate = LocalDate.now()): RunResult =
         withContext(Dispatchers.IO) {
             val settings = settingsStore.settings
-            val profile = mergeProfile(database.resumeDao().getAll())
+            val profile = ProfileBuilder.build(currentResumes(), currentEdits())
             val customSources = database.jobSourceDao().getEnabled().map {
                 CustomSource(it.id, it.name, it.kind, it.configJson, it.enabled)
             }
