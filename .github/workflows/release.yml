@@ -72,10 +72,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ steps.rel.outputs.tag }}
         run: |
-          gh release create "$TAG" dist/*.apk \
-            --target "$GITHUB_SHA" \
-            --title "JobHunt $TAG" \
-            --notes "$(cat <<'NOTES'
+          notes="$(mktemp)"
+          cat > "$notes" <<'NOTES'
           ## Install
 
           Download the `.apk` below and open it on your phone. Android will ask
@@ -89,10 +87,25 @@ jobs:
 
           ## First run
 
-          1. **Resumes** — add one or more (PDF, DOCX, Markdown, or text).
-          2. **Home** — set your locations, then tap **Hunt now**.
-          3. Leave the daily hunt switched on and it runs itself from then on.
+          1. **Profile** — add the job titles you want, plus your skills. You can
+             type these in directly; a resume is optional.
+          2. **Resumes** *(optional)* — upload PDF, DOCX, Markdown or text to fill
+             the profile in quickly, then prune anything irrelevant.
+          3. **Home** — set your locations, then tap **Hunt now**. Leave the daily
+             hunt switched on and it runs itself from then on.
 
           Everything happens on the device: no account, no server, no API keys.
           NOTES
-          )"
+
+          # Re-running a tag refreshes it rather than failing, so a release can
+          # be rebuilt after a fix without inventing a new version number.
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "Release $TAG already exists — refreshing its APK and notes."
+            gh release upload "$TAG" dist/*.apk --clobber
+            gh release edit "$TAG" --notes-file "$notes"
+          else
+            gh release create "$TAG" dist/*.apk \
+              --target "$GITHUB_SHA" \
+              --title "JobHunt $TAG" \
+              --notes-file "$notes"
+          fi
