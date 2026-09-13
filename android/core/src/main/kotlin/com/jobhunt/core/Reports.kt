@@ -14,8 +14,14 @@ object Reports {
         appendLine("**Funnel:** ${result.funnel}")
         appendLine(
             "**Dropped — out of range:** ${result.fetched - result.inRange} | " +
-                "**Dropped — no resume fit:** ${result.inRange - result.relevant}",
+                "**Dropped — no profile fit:** ${result.inRange - result.relevant}",
         )
+        if (result.enriched > 0 || result.duplicates > 0) {
+            appendLine(
+                "**Descriptions fetched:** ${result.enriched} | " +
+                    "**Duplicate copies folded in:** ${result.duplicates}",
+            )
+        }
         appendLine()
         appendLine("## TL;DR")
 
@@ -47,6 +53,9 @@ object Reports {
                 "- **Posted:** ${listing.posted.ifBlank { "unknown" }} | " +
                     "**Source:** ${listing.source}",
             )
+            if (listing.alsoPostedBy.isNotEmpty()) {
+                appendLine("- **Also posted by:** ${listing.alsoPostedBy.joinToString(", ")}")
+            }
             appendLine("- **Apply:** ${listing.url}")
             appendLine()
         }
@@ -93,6 +102,9 @@ object Reports {
                     "**Source:** ${listing.source} | " +
                     "**Posted:** ${listing.posted.ifBlank { "unknown" }}",
             )
+            if (listing.alsoPostedBy.isNotEmpty()) {
+                appendLine("- **Also posted by:** ${listing.alsoPostedBy.joinToString(", ")}")
+            }
             appendLine("- **Apply:** ${listing.url}")
             appendLine()
         }

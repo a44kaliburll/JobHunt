@@ -15,7 +15,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase
         ListingEntity::class,
         RunLogEntity::class,
     ],
-    version = 2,
+    version = 3,
     exportSchema = false,
 )
 abstract class JobHuntDatabase : RoomDatabase() {
@@ -50,6 +50,18 @@ abstract class JobHuntDatabase : RoomDatabase() {
             }
         }
 
+        /** Adds the duplicate-grouping columns to stored listings. */
+        private val MIGRATION_2_3 = object : Migration(2, 3) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL(
+                    "ALTER TABLE `listings` ADD COLUMN `groupKey` TEXT NOT NULL DEFAULT ''",
+                )
+                db.execSQL(
+                    "ALTER TABLE `listings` ADD COLUMN `alsoPostedBy` TEXT NOT NULL DEFAULT ''",
+                )
+            }
+        }
+
         @Volatile
         private var instance: JobHuntDatabase? = null
 
@@ -58,7 +70,7 @@ abstract class JobHuntDatabase : RoomDatabase() {
                 context.applicationContext,
                 JobHuntDatabase::class.java,
                 "jobhunt.db",
-            ).addMigrations(MIGRATION_1_2).build().also { instance = it }
+            ).addMigrations(MIGRATION_1_2, MIGRATION_2_3).build().also { instance = it }
         }
     }
 }

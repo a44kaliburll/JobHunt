@@ -13,6 +13,16 @@ interface Scraper {
     val name: String
     val keyPrefix: String
     fun search(query: SearchQuery): List<JobPosting>
+
+    /**
+     * Whether [describe] can fill in a description this board's search results
+     * leave out. Fetching one costs a request per posting, so the pipeline only
+     * spends that on a budgeted shortlist of the most promising candidates.
+     */
+    val supportsDescriptions: Boolean get() = false
+
+    /** The full description for [posting], or null if it could not be read. */
+    fun describe(posting: JobPosting): String? = null
 }
 
 /** Result of a scrape attempt that never throws — one bad board can't kill a run. */

@@ -15,6 +15,10 @@ data class RunResult(
     val fetched: Int = 0,
     val inRange: Int = 0,
     val relevant: Int = 0,
+    /** Descriptions fetched for postings whose search results lacked one. */
+    val enriched: Int = 0,
+    /** Copies of a job folded into another copy rather than listed twice. */
+    val duplicates: Int = 0,
     val newListings: List<Listing> = emptyList(),
     /** Existing listings whose score improved: key -> new score. */
     val rescored: Map<String, Int> = emptyMap(),
@@ -31,14 +35,17 @@ data class RunResult(
 }
 
 /**
- * The scrape -> score -> dedupe -> retain pipeline, kept free of Android and
- * storage concerns so it can be unit-tested on the JVM.
+ * The scrape -> enrich -> score -> group -> retain pipeline, kept free of
+ * Android and storage concerns so it can be unit-tested on the JVM.
  *
- *  1. Build (title x location) queries from the merged resume profile.
+ *  1. Build (title x location) queries from the profile.
  *  2. Fan them out across every scraper; failures degrade to warnings.
- *  3. Funnel: fetched -> in range (location) -> relevant (score >= threshold)
- *     -> new (not already stored).
- *  4. Report which listings are new, which improved, and which aged out.
+ *  3. Fill in missing descriptions for a budgeted shortlist of the most
+ *     promising postings, so boards that only return cards can still be scored
+ *     on more than their title.
+ *  4. Funnel: fetched -> in range (location) -> relevant (score >= threshold).
+ *  5. Group reposts and cross-posts so one job is one listing.
+ *  6. Report which listings are new, which improved, and which aged out.
  */
 class Pipeline(private val scrapers: List<Scraper>) {
 
@@ -53,7 +60,7 @@ class Pipeline(private val scrapers: List<Scraper>) {
             return RunResult(
                 date = date,
                 errors = listOf(
-                    "No resume data: add at least one resume so queries can be built.",
+                    "No profile yet: add a job title or a resume so queries can be built.",
                 ),
             )
         }
@@ -61,7 +68,7 @@ class Pipeline(private val scrapers: List<Scraper>) {
         val queries = Matching.buildQueries(profile, settings.locations)
         val queryLabels = mutableListOf<String>()
         val errors = mutableListOf<String>()
-        val seen = LinkedHashMap<String, JobPosting>()
+        val seen = LinkedHashMap<String, Sighting>()
         var fetched = 0
 
         for (scraper in scrapers) {
@@ -71,41 +78,52 @@ class Pipeline(private val scrapers: List<Scraper>) {
                 outcome.error?.let { errors += it }
                 for (posting in outcome.postings) {
                     fetched++
-                    seen.putIfAbsent(posting.key, posting)
+                    seen.putIfAbsent(posting.key, Sighting(posting, scraper))
                 }
             }
         }
 
-        val existingByKey = existing.associateBy { it.key }
+        val inRange = seen.values.filter {
+            Matching.locationInRange(it.posting.location, settings.locations)
+        }
+
+        val enrichment = enrich(inRange, profile, settings.descriptionBudget)
+        errors += enrichment.errors
+
         val minScore = settings.minScore.coerceIn(0, MAX_SCORE)
-        var inRange = 0
-        var relevant = 0
+        val relevant = enrichment.postings
+            .map { it to Matching.score(it, profile).total }
+            .filter { (_, score) -> score >= minScore }
+
+        val merged = Dedupe.collapse(relevant)
+
+        val existingByKey = existing.associateBy { it.key }
+        val existingByGroup = existing
+            .filter { it.groupKey.isNotBlank() }
+            .associateBy { it.groupKey }
+
         val newListings = mutableListOf<Listing>()
         val rescored = mutableMapOf<String, Int>()
 
-        for (posting in seen.values) {
-            if (!Matching.locationInRange(posting.location, settings.locations)) continue
-            inRange++
-            val score = Matching.score(posting, profile).total
-            if (score < minScore) continue
-            relevant++
-
-            val stored = existingByKey[posting.key]
+        for (job in merged) {
+            val stored = existingByKey[job.posting.key] ?: existingByGroup[job.groupKey]
             if (stored == null) {
                 newListings += Listing(
-                    key = posting.key,
-                    title = posting.title,
-                    company = posting.company,
-                    location = posting.location,
-                    url = posting.url,
-                    source = posting.source,
-                    posted = posting.posted,
-                    score = score,
+                    key = job.posting.key,
+                    title = job.posting.title,
+                    company = job.posting.company,
+                    location = job.posting.location,
+                    url = job.posting.url,
+                    source = job.posting.source,
+                    posted = job.posting.posted,
+                    score = job.score,
                     firstSeen = date,
                     isNew = true,
+                    groupKey = job.groupKey,
+                    alsoPostedBy = job.alsoPostedBy,
                 )
-            } else if (score > stored.score) {
-                rescored[posting.key] = score
+            } else if (job.score > stored.score) {
+                rescored[stored.key] = job.score
             }
         }
 
@@ -115,8 +133,10 @@ class Pipeline(private val scrapers: List<Scraper>) {
         return RunResult(
             date = date,
             fetched = fetched,
-            inRange = inRange,
-            relevant = relevant,
+            inRange = inRange.size,
+            relevant = relevant.size,
+            enriched = enrichment.count,
+            duplicates = relevant.size - merged.size,
             newListings = newListings.sortedByDescending { it.score },
             rescored = rescored,
             staleKeys = staleKeys,
@@ -124,6 +144,55 @@ class Pipeline(private val scrapers: List<Scraper>) {
             errors = errors,
         )
     }
+
+    /**
+     * Fill in descriptions the search results left out.
+     *
+     * Every fetch is one more request to a board that would rather we did not,
+     * so the budget is spent on the postings most likely to survive scoring:
+     * the shortlist is ranked by the score they already have on title alone.
+     */
+    private fun enrich(
+        candidates: List<Sighting>,
+        profile: SearchProfile,
+        budget: Int,
+    ): Enrichment {
+        val shortlist = candidates
+            .filter { it.posting.description.isBlank() && it.scraper.supportsDescriptions }
+            .sortedByDescending { Matching.score(it.posting, profile).total }
+            .take(budget.coerceAtLeast(0))
+            .mapTo(mutableSetOf()) { it.posting.key }
+
+        if (shortlist.isEmpty()) return Enrichment(candidates.map { it.posting }, 0, emptyList())
+
+        var count = 0
+        val errors = mutableListOf<String>()
+        val postings = candidates.map { sighting ->
+            if (sighting.posting.key !in shortlist) return@map sighting.posting
+            val description = runCatching { sighting.scraper.describe(sighting.posting) }
+                .onFailure {
+                    errors += "${sighting.scraper.name} description: " +
+                        (it.message ?: it::class.simpleName)
+                }
+                .getOrNull()
+            if (description.isNullOrBlank()) {
+                sighting.posting
+            } else {
+                count++
+                sighting.posting.copy(description = description)
+            }
+        }
+        // One board rate-limiting mid-run shouldn't bury the digest in noise.
+        return Enrichment(postings, count, errors.distinct().take(3))
+    }
+
+    private data class Sighting(val posting: JobPosting, val scraper: Scraper)
+
+    private data class Enrichment(
+        val postings: List<JobPosting>,
+        val count: Int,
+        val errors: List<String>,
+    )
 
     companion object {
         /** Built-in boards plus the user's enabled custom sources. */

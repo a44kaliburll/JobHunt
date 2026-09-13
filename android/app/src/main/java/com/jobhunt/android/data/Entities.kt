@@ -1,5 +1,6 @@
 package com.jobhunt.android.data
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.Index
 import androidx.room.PrimaryKey
@@ -72,18 +73,29 @@ data class ListingEntity(
     val isNew: Boolean = true,
     /** "" | "saved" | "applied" | "rejected" | "hidden" */
     val status: String = "",
+    /** Shared by reposts and cross-posts of one job; see com.jobhunt.core.Dedupe. */
+    @ColumnInfo(defaultValue = "''") val groupKey: String = "",
+    /** Newline-separated names this job was also advertised under. */
+    @ColumnInfo(defaultValue = "''") val alsoPostedBy: String = "",
 ) {
     fun toCore(): Listing = Listing(
         key = key, title = title, company = company, location = location,
         url = url, source = source, posted = posted, score = score,
         firstSeen = firstSeen, isNew = isNew, status = status,
+        groupKey = groupKey,
+        alsoPostedBy = alsoPostedBy.lines().filter { it.isNotBlank() },
     )
+
+    val alsoPostedByList: List<String>
+        get() = alsoPostedBy.lines().filter { it.isNotBlank() }
 }
 
 fun Listing.toEntity(id: Long = 0): ListingEntity = ListingEntity(
     id = id, key = key, title = title, company = company, location = location,
     url = url, source = source, posted = posted, score = score,
     firstSeen = firstSeen, isNew = isNew, status = status,
+    groupKey = groupKey,
+    alsoPostedBy = alsoPostedBy.joinToString("\n"),
 )
 
 @Entity(tableName = "run_logs")

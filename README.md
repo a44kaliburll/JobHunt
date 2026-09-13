@@ -23,9 +23,14 @@ search profile ──► queries (title × location) fanned out to:
                      • WeWorkRemotely            • The Muse
                      • + your own sites (RSS / JSON API / HTML)
    ▼
+for boards that return only a summary card, fetch the full description
+of the most promising postings — otherwise they score on title alone
+   ▼
 funnel: fetched → in range (location) → relevant (score ≥ threshold) → new
    ▼
-Room database (dedupe by source:id, 90-day retention)
+group reposts and cross-posts so one job is one listing
+   ▼
+Room database (90-day retention)
    ▼
 notification for new matches + shareable Markdown digests
 ```
@@ -41,6 +46,17 @@ Every listing is scored out of 50 and shown as a match meter:
 
 The daily background run is handled by WorkManager, so it survives reboots and
 respects Doze. You choose the hour, and whether it should wait for Wi-Fi.
+
+## One job, one listing
+
+Boards re-advertise the same role under a new id every few weeks, and
+aggregators re-list an employer's job under their own name — so the same job
+arrives two or three times with nothing in common but its title. Listings are
+grouped on title and location, and the copy kept is the one that scores
+highest. The others are folded in and shown as "also posted by".
+
+Generic titles ("Project Manager") stay scoped to their company, so two
+unrelated employers in one city are never merged.
 
 ## Your profile is editable
 
@@ -81,13 +97,14 @@ plain Kotlin module that runs — and is tested — on any JVM:
 
 ```
 android/
-├── core/                        # pure Kotlin, no Android APIs, 55 unit tests
+├── core/                        # pure Kotlin, no Android APIs, 72 unit tests
 │   └── src/main/kotlin/com/jobhunt/core/
 │       ├── ResumeParser.kt      # skills, duties, certs, titles from resume text
 │       ├── ProfileBuilder.kt    # parsed resumes + hand edits -> search profile
 │       ├── Taxonomy.kt          # cross-industry skill + certification vocabulary
 │       ├── Matching.kt          # query fan-out and 0–50 scoring
-│       ├── Pipeline.kt          # scrape → score → dedupe → retention
+│       ├── Pipeline.kt          # scrape → enrich → score → group → retention
+│       ├── Dedupe.kt            # collapses reposts and cross-posts of one job
 │       ├── Reports.kt           # Markdown digest + working list
 │       ├── ResumeText.kt        # DOCX / plain-text extraction
 │       └── scrapers/            # built-in boards + user-defined source engine
@@ -161,6 +178,11 @@ python3 -m venv .venv && .venv/bin/pip install -e ".[dev]"
 ```
 
 See `jobhunt/` for that implementation; `pytest -q` runs its 19 tests.
+
+It has not been kept in lockstep with the app. Description fetching, duplicate
+grouping, and the editable profile are Android-only so far — the Python version
+still dedupes by `source:id` alone and builds its profile from resumes plus a
+settings field.
 
 ## A note on scraping
 

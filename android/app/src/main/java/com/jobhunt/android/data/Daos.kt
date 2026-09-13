@@ -99,6 +99,12 @@ interface ListingDao {
 
     @Query("SELECT COUNT(*) FROM listings WHERE isNew = 1")
     suspend fun countNew(): Int
+
+    @Query("SELECT * FROM listings WHERE groupKey = ''")
+    suspend fun withoutGroupKey(): List<ListingEntity>
+
+    @Query("UPDATE listings SET groupKey = :groupKey WHERE id = :id")
+    suspend fun setGroupKey(id: Long, groupKey: String)
 }
 
 @Dao

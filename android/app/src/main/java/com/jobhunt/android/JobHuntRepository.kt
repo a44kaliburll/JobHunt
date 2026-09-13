@@ -12,6 +12,7 @@ import com.jobhunt.android.data.SettingsStore
 import com.jobhunt.android.data.toEntity
 import com.jobhunt.android.resume.AndroidResumeReader
 import com.jobhunt.core.CustomSource
+import com.jobhunt.core.Dedupe
 import com.jobhunt.core.OkHttpFetcher
 import com.jobhunt.core.ParsedResume
 import com.jobhunt.core.Pipeline
@@ -141,6 +142,17 @@ class JobHuntRepository(
         withContext(Dispatchers.IO) {
             database.profileItemDao().delete(field.key, rawValue.normalizedForProfile())
         }
+
+    /**
+     * Fills in duplicate-grouping keys for listings stored before grouping
+     * existed, so an old library starts collapsing reposts on the next run.
+     */
+    suspend fun backfillGroupKeys() = withContext(Dispatchers.IO) {
+        val listingDao = database.listingDao()
+        listingDao.withoutGroupKey().forEach { row ->
+            listingDao.setGroupKey(row.id, Dedupe.groupKey(row.title, row.location, row.company))
+        }
+    }
 
     /**
      * Carries titles from the old "extra search titles" setting into the

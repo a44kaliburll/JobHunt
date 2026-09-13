@@ -10,12 +10,26 @@ import kotlin.test.assertTrue
 private class FakeBoard(
     override val name: String = "FakeBoard",
     private val postings: List<JobPosting>,
+    /** key -> description, as a detail page would return. */
+    private val descriptions: Map<String, String> = emptyMap(),
+    private val describeThrows: Boolean = false,
 ) : Scraper {
     override val keyPrefix = "fb"
     var searchCount = 0
+    val described = mutableListOf<String>()
+
+    override val supportsDescriptions: Boolean
+        get() = descriptions.isNotEmpty() || describeThrows
+
     override fun search(query: SearchQuery): List<JobPosting> {
         searchCount++
         return postings
+    }
+
+    override fun describe(posting: JobPosting): String? {
+        described += posting.key
+        if (describeThrows) throw java.io.IOException("429 Too Many Requests")
+        return descriptions[posting.key]
     }
 }
 
@@ -99,6 +113,103 @@ class PipelineTest {
     }
 
     @Test
+    fun `a bare posting is scored on its description once fetched`() {
+        // Same posting, with and without the board filling in its description.
+        val bare = ON_TARGET.copy(description = "")
+        val withoutFetch = Pipeline(listOf(FakeBoard(postings = listOf(bare))))
+            .run(PROFILE, SETTINGS, emptyList(), TODAY)
+        val withFetch = Pipeline(
+            listOf(
+                FakeBoard(
+                    postings = listOf(bare),
+                    descriptions = mapOf("fb:1" to "instructional design canvas wcag"),
+                ),
+            ),
+        ).run(PROFILE, SETTINGS, emptyList(), TODAY)
+
+        assertEquals(0, withoutFetch.enriched)
+        assertEquals(1, withFetch.enriched)
+        assertTrue(
+            withFetch.newListings.single().score > withoutFetch.newListings.single().score,
+            "fetching the description should unlock skill and duty points",
+        )
+    }
+
+    @Test
+    fun `postings that already carry a description are not re-fetched`() {
+        val board = FakeBoard(
+            postings = listOf(ON_TARGET),
+            descriptions = mapOf("fb:1" to "would be wasteful"),
+        )
+        Pipeline(listOf(board)).run(PROFILE, SETTINGS, emptyList(), TODAY)
+
+        assertTrue(board.described.isEmpty())
+    }
+
+    @Test
+    fun `the description budget caps how many requests a run makes`() {
+        val bare = (1..10).map {
+            ON_TARGET.copy(key = "fb:$it", url = "https://fake.test/$it", description = "")
+        }
+        val board = FakeBoard(
+            postings = bare,
+            descriptions = bare.associate { it.key to "instructional design" },
+        )
+        Pipeline(listOf(board)).run(
+            PROFILE, SETTINGS.copy(descriptionBudget = 3), emptyList(), TODAY,
+        )
+
+        assertEquals(3, board.described.size)
+    }
+
+    @Test
+    fun `a board refusing detail requests degrades to a warning`() {
+        val board = FakeBoard(postings = listOf(ON_TARGET.copy(description = "")), describeThrows = true)
+        val result = Pipeline(listOf(board)).run(PROFILE, SETTINGS, emptyList(), TODAY)
+
+        assertEquals(0, result.enriched)
+        assertTrue(result.errors.any { "429" in it }, "got: ${result.errors}")
+        assertEquals(1, result.newCount, "the run still produces its listings")
+    }
+
+    @Test
+    fun `a job cross-posted under two companies becomes one listing`() {
+        val employer = JobPosting(
+            key = "fb:10", title = "Associate Director, Digital Lab Orchestration",
+            company = "Regeneron", location = "Albany, NY", posted = "2026-05-21",
+            source = "FakeBoard", description = "instructional design",
+        )
+        val aggregator = employer.copy(
+            key = "fb:11", company = "BioSpace", posted = "2026-05-28",
+        )
+        val result = Pipeline(listOf(FakeBoard(postings = listOf(employer, aggregator))))
+            .run(PROFILE, SETTINGS, emptyList(), TODAY)
+
+        assertEquals(2, result.relevant, "both copies passed scoring")
+        assertEquals(1, result.newCount, "but only one job is stored")
+        assertEquals(1, result.duplicates)
+        assertEquals(listOf("BioSpace"), result.newListings.single().alsoPostedBy)
+    }
+
+    @Test
+    fun `a repost of a job already stored is not surfaced as new`() {
+        val stored = Listing(
+            key = "fb:99",
+            title = ON_TARGET.title,
+            company = ON_TARGET.company,
+            location = ON_TARGET.location,
+            score = 35,
+            firstSeen = "2026-06-01",
+            isNew = false,
+            groupKey = Dedupe.groupKey(ON_TARGET),
+        )
+        val result = Pipeline(listOf(FakeBoard(postings = listOf(ON_TARGET))))
+            .run(PROFILE, SETTINGS, existing = listOf(stored), today = TODAY)
+
+        assertEquals(0, result.newCount, "same job, new vacancy id")
+    }
+
+    @Test
     fun `duplicate keys across boards collapse to one listing`() {
         val boards = listOf(
             FakeBoard("BoardA", listOf(ON_TARGET)),
@@ -122,13 +233,13 @@ class PipelineTest {
     }
 
     @Test
-    fun `a run without resume data stops before touching the network`() {
+    fun `a run without a profile stops before touching the network`() {
         val board = FakeBoard(postings = listOf(ON_TARGET))
         val result = Pipeline(listOf(board)).run(SearchProfile(), SETTINGS, emptyList(), TODAY)
 
         assertEquals(0, board.searchCount, "no queries should be issued")
         assertEquals(0, result.fetched)
-        assertTrue(result.errors.any { "No resume data" in it }, "got: ${result.errors}")
+        assertTrue(result.errors.any { "No profile yet" in it }, "got: ${result.errors}")
     }
 
     @Test

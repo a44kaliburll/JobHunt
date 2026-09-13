@@ -111,6 +111,14 @@ private fun ListingCard(listing: ListingEntity, onStatusChange: (String) -> Unit
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
+            if (listing.alsoPostedByList.isNotEmpty()) {
+                Text(
+                    "Also posted by ${listing.alsoPostedByList.joinToString(", ")}",
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(top = 2.dp),
+                )
+            }
             MatchMeter(listing.score, Modifier.padding(top = 8.dp))
 
             Row(

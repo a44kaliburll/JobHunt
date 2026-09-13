@@ -31,7 +31,10 @@ class JobHuntApplication : Application() {
         if (settingsStore.dailyRunEnabled) {
             JobHuntScheduler.scheduleDaily(this, settingsStore)
         }
-        appScope.launch { repository.migrateLegacyExtraTitles() }
+        appScope.launch {
+            repository.migrateLegacyExtraTitles()
+            repository.backfillGroupKeys()
+        }
     }
 
     private fun createNotificationChannel() {

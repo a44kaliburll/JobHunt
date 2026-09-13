@@ -17,6 +17,11 @@ class LinkedInScraper(private val fetcher: Fetcher) : Scraper {
     override val name = "LinkedIn"
     override val keyPrefix = "li"
 
+    // Guest search returns cards only — title, company, location, date — so a
+    // LinkedIn listing would otherwise be scored on its title alone, leaving
+    // the skills and duties halves of the score permanently unreachable.
+    override val supportsDescriptions = true
+
     override fun search(query: SearchQuery): List<JobPosting> {
         val url = buildString {
             append(SEARCH_URL)
@@ -52,7 +57,25 @@ class LinkedInScraper(private val fetcher: Fetcher) : Scraper {
         return postings
     }
 
+    override fun describe(posting: JobPosting): String? {
+        val jobId = posting.key.substringAfter(':').takeIf { it.isNotBlank() } ?: return null
+        val document = Jsoup.parse(fetcher.get("$DETAIL_URL/$jobId"))
+        val body = document.selectFirst(".show-more-less-html__markup, .description__text")
+            ?: return null
+        // Criteria (seniority, employment type, function) sit outside the body
+        // but carry vocabulary worth scoring against.
+        val criteria = document.select(".description__job-criteria-item")
+            .joinToString(" ") { it.text().trim() }
+        return listOf(body.text().trim(), criteria)
+            .filter { it.isNotBlank() }
+            .joinToString(" ")
+            .take(4000)
+            .ifBlank { null }
+    }
+
     private companion object {
+        const val DETAIL_URL =
+            "https://www.linkedin.com/jobs-guest/jobs/api/jobPosting"
         const val SEARCH_URL =
             "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search"
         val JOB_ID_RE = Regex("""-?(\d{6,})(?:\?|$)""")
