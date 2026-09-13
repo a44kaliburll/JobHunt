@@ -3,7 +3,7 @@ from dataclasses import replace
 
 import pytest
 
-from jobhunt import auth, db, pipeline
+from jobhunt import auth, db, pipeline, reports
 from jobhunt.db import Listing, Resume, User
 from jobhunt.resume.parser import parse_resume
 from jobhunt.scrapers.base import JobPosting, Scraper, SearchQuery
@@ -247,3 +247,28 @@ def test_a_repost_of_a_stored_job_is_not_surfaced_as_new(session, monkeypatch):
 
     assert result.new_count == 0
     assert session.query(Listing).filter_by(user_id=user.id).count() == 1
+
+
+def test_a_board_down_all_run_warns_once_not_once_per_query(session, monkeypatch):
+    user = _make_user(session)
+
+    class DeadBoard(Scraper):
+        name = "DeadBoard"
+        key_prefix = "db"
+
+        def search(self, query):
+            raise RuntimeError("403 Forbidden")
+
+    # Several locations, so the board is asked more than once.
+    user.locations = ["Albany, NY", "Utica, NY", "Remote"]
+    session.commit()
+
+    monkeypatch.setattr(
+        "jobhunt.pipeline.build_scrapers", lambda s, client=None: [DeadBoard()]
+    )
+    result = pipeline.run_for_user(session, user, today=dt.date(2026, 6, 9))
+
+    assert len(result.errors) > 1, "it really did fail on every query"
+    digest = reports.render_digest(user, result, [])
+    assert digest.count("DeadBoard: 403 Forbidden") == 1
+    assert "(×" in digest, "the repeat count should be shown"

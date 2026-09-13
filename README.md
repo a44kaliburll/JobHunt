@@ -158,6 +158,30 @@ without `{query}` is fetched once per run and filtered locally.
 }
 ```
 
+## The scheduled hunt
+
+`.github/workflows/hunt.yml` runs the hunt daily at 11:26 UTC — 07:26 Eastern,
+the time the original cron ran — and commits the digest and working list to
+`cron/digests/`. It runs on GitHub's runners because they have open internet;
+a sandboxed agent environment generally does not, and a hunt that cannot reach
+the boards writes an empty digest rather than an obvious error.
+
+- **What it searches** lives in `cron/profile.json`. Edit and commit; the next
+  run picks it up. Titles are what the boards are queried with.
+- **State** is `cron/state/jobhunt.db`, committed so **NEW** markers and the
+  90-day retention window survive between runs.
+- **Failures are visible.** Every unreachable board lands in the digest's
+  Warnings section, collapsed to one line with a repeat count.
+
+Run it on demand from **Actions → Scheduled hunt → Run workflow**, optionally
+ticking *probe* to have it report board reachability.
+
+### Getting the digests into Obsidian
+
+Install the **Obsidian Git** plugin, point it at this repository, and pull on
+whatever interval suits you. `cron/digests/current_listings.md` is the rolling
+working list; `cron/digests/YYYY-MM-DD.md` are the daily digests.
+
 ## Desktop / server mode (optional)
 
 The repository also contains the original Python implementation of the same
@@ -177,7 +201,7 @@ python3 -m venv .venv && .venv/bin/pip install -e ".[dev]"
 0 7 * * * cd /path/to/JobHunt && .venv/bin/jobhunt run
 ```
 
-See `jobhunt/` for that implementation; `pytest -q` runs its 37 tests.
+See `jobhunt/` for that implementation; `pytest -q` runs its 38 tests.
 
 Description fetching and duplicate grouping work the same way in both, and the
 two dedupe modules are kept deliberately in step. The editable profile is still

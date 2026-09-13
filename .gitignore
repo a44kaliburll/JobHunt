@@ -21,3 +21,6 @@ local.properties
 .idea/
 *.iml
 captures/
+
+# The scheduled hunt keeps its state in-repo so "NEW" survives between runs.
+!cron/state/jobhunt.db

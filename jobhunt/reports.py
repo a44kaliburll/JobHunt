@@ -80,7 +80,9 @@ def render_digest(user: User, result: "RunResult", top: list[Listing]) -> str:
         ]
     if result.errors:
         lines += ["## Warnings"]
-        lines += [f"- {e}" for e in result.errors]
+        # A board that is down fails once per query; say so once.
+        for message, count in Counter(result.errors).items():
+            lines.append(f"- {message}" + (f" (×{count})" if count > 1 else ""))
         lines.append("")
     lines += ["## Queries fanned"]
     lines += [f"- {q}" for q in result.queries]

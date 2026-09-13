@@ -1,0 +1,43 @@
+{
+  "_comment": [
+    "The profile the scheduled hunt runs on. Edit this file and commit; the",
+    "next run picks it up. Titles are what the boards are actually searched",
+    "with — skills, certifications and duties only score what comes back.",
+    "Seeded from the queries the original cron was fanning on 2026-05-31."
+  ],
+  "locations": [
+    "Albany, NY",
+    "Schenectady, NY",
+    "Saratoga Springs, NY",
+    "Utica, NY",
+    "Remote"
+  ],
+  "min_score": 6,
+  "titles": [
+    "Director of Instructional Design",
+    "Director of Online Learning",
+    "Online Education",
+    "Director of Teaching and Learning",
+    "Director of Digital Accessibility",
+    "Manager of Digital Accessibility"
+  ],
+  "skills": [
+    "instructional design",
+    "curriculum development",
+    "online learning",
+    "e-learning",
+    "learning management systems",
+    "canvas",
+    "accessibility",
+    "wcag",
+    "universal design for learning",
+    "assessment design",
+    "program evaluation",
+    "faculty development",
+    "project management",
+    "budget management",
+    "team leadership"
+  ],
+  "certifications": [],
+  "duties": []
+}

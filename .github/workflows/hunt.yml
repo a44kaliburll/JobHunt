@@ -1,0 +1,90 @@
+name: Scheduled hunt
+
+on:
+  schedule:
+    # 11:26 UTC — 07:26 Eastern in summer, 06:26 in winter, matching the time
+    # the original cron ran. GitHub's scheduler has no timezone, so this drifts
+    # by an hour across DST rather than chasing it.
+    - cron: "26 11 * * *"
+  workflow_dispatch:
+    inputs:
+      probe:
+        description: "Also report board reachability and NY State Jobs structure"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+# A long run must never overlap the next day's.
+concurrency:
+  group: scheduled-hunt
+  cancel-in-progress: false
+
+jobs:
+  hunt:
+    name: Run the hunt and commit the digest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Probe the boards
+        if: inputs.probe
+        run: python cron/probe.py
+
+      - name: Seed the profile
+        env:
+          JOBHUNT_DATA_DIR: cron/state
+        run: python cron/seed.py
+
+      - name: Hunt
+        env:
+          JOBHUNT_DATA_DIR: cron/state
+        run: jobhunt run --email cron@jobhunt.local
+
+      - name: Collect the digest
+        run: |
+          mkdir -p cron/digests
+          # reports land under <data dir>/reports/<user id>/
+          find cron/state/reports -name '*.md' -exec cp {} cron/digests/ \;
+          ls -la cron/digests/
+
+      - name: Commit what changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f cron/digests cron/state/jobhunt.db
+          if git diff --cached --quiet; then
+            echo "nothing new today"
+            exit 0
+          fi
+          git commit -m "Job hunt digest $(date -u +%Y-%m-%d)"
+          # The scheduled run races nothing but itself; rebase on top of any
+          # human commit that landed while it was working.
+          for attempt in 1 2 3; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && \
+              git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            echo "push attempt $attempt failed; retrying"
+            sleep $((attempt * 5))
+          done
+          exit 1
+
+      - name: Summarise
+        run: |
+          latest=$(ls -1 cron/digests/2*.md 2>/dev/null | sort | tail -1)
+          if [ -n "$latest" ]; then
+            {
+              echo "### $(basename "$latest")"
+              echo
+              sed -n '1,30p' "$latest"
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi

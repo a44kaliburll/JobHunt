@@ -62,7 +62,10 @@ object Reports {
 
         if (result.errors.isNotEmpty()) {
             appendLine("## Warnings")
-            result.errors.forEach { appendLine("- $it") }
+            // A board that is down fails once per query; say so once.
+            result.errors.groupingBy { it }.eachCount().forEach { (message, count) ->
+                appendLine("- $message" + if (count > 1) " (×$count)" else "")
+            }
             appendLine()
         }
 
