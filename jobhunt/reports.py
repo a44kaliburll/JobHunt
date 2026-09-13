@@ -37,6 +37,13 @@ def render_digest(user: User, result: "RunResult", top: list[Listing]) -> str:
         f"**Funnel:** {result.funnel}",
         f"**Dropped — out of range:** {result.fetched - result.in_range} | "
         f"**Dropped — no resume fit:** {result.in_range - result.relevant}",
+    ]
+    if result.enriched or result.duplicates:
+        lines.append(
+            f"**Descriptions fetched:** {result.enriched} | "
+            f"**Duplicate copies folded in:** {result.duplicates}"
+        )
+    lines += [
         "",
         "## TL;DR",
     ]
@@ -61,6 +68,13 @@ def render_digest(user: User, result: "RunResult", top: list[Listing]) -> str:
             f"- **Match:** {match_bar(listing.score)}",
             f"- **Posted:** {listing.posted or 'unknown'} | "
             f"**Source:** {listing.source}",
+        ]
+        if listing.also_posted_by:
+            lines.append(
+                "- **Also posted by:** "
+                + ", ".join(listing.also_posted_by.splitlines())
+            )
+        lines += [
             f"- **Apply:** {listing.url}",
             "",
         ]
@@ -96,6 +110,13 @@ def render_current_listings(user: User, listings: list[Listing], now: str) -> st
             f"- **Match:** {match_bar(listing.score)}",
             f"- **Location:** {listing.location or 'unknown'} | "
             f"**Source:** {listing.source} | **Posted:** {listing.posted or 'unknown'}",
+        ]
+        if listing.also_posted_by:
+            lines.append(
+                "- **Also posted by:** "
+                + ", ".join(listing.also_posted_by.splitlines())
+            )
+        lines += [
             f"- **Apply:** {listing.url}",
             "",
         ]

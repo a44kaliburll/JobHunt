@@ -161,6 +161,10 @@ class Listing(Base):
     is_new: Mapped[bool] = mapped_column(Boolean, default=True)
     # User workflow status: "" | "saved" | "applied" | "rejected" | "hidden"
     status: Mapped[str] = mapped_column(String(32), default="")
+    # Shared by reposts and cross-posts of one job; see jobhunt.dedupe.
+    group_key: Mapped[str] = mapped_column(String(512), default="", index=True)
+    # Newline-separated names this job was also advertised under.
+    also_posted_by: Mapped[str] = mapped_column(Text, default="")
 
     user: Mapped[User] = relationship(back_populates="listings")
 
@@ -203,7 +207,38 @@ def get_engine():
 
 
 def init_db() -> None:
-    Base.metadata.create_all(get_engine())
+    engine = get_engine()
+    Base.metadata.create_all(engine)
+    _add_missing_columns(engine)
+
+
+def _add_missing_columns(engine) -> None:
+    """Bring a database created before duplicate-grouping up to date.
+
+    The project has no migration framework; these two columns are additive and
+    default to empty, so a plain ALTER is enough.
+    """
+    additions = {
+        "group_key": "VARCHAR(512) NOT NULL DEFAULT ''",
+        "also_posted_by": "TEXT NOT NULL DEFAULT ''",
+    }
+    with engine.begin() as conn:
+        tables = {
+            row[0]
+            for row in conn.exec_driver_sql(
+                "SELECT name FROM sqlite_master WHERE type='table'"
+            )
+        }
+        if "listings" not in tables:
+            return
+        present = {
+            row[1] for row in conn.exec_driver_sql("PRAGMA table_info(listings)")
+        }
+        for column, ddl in additions.items():
+            if column not in present:
+                conn.exec_driver_sql(
+                    f"ALTER TABLE listings ADD COLUMN {column} {ddl}"
+                )
 
 
 def get_sessionmaker() -> sessionmaker:

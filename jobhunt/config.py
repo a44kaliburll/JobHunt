@@ -38,6 +38,10 @@ USER_AGENT = os.environ.get(
     "Chrome/124.0 Safari/537.36 JobHunt/0.1",
 )
 
+# Cap on description fetches per run. Boards returning only search cards need
+# one request per posting to be scored on anything but their title.
+DESCRIPTION_BUDGET = int(os.environ.get("JOBHUNT_DESCRIPTION_BUDGET", "40"))
+
 # Cap on fan-out queries per run so a profile with many titles/locations
 # doesn't hammer the boards.
 MAX_QUERIES_PER_SOURCE = int(os.environ.get("JOBHUNT_MAX_QUERIES_PER_SOURCE", "25"))

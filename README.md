@@ -177,11 +177,11 @@ python3 -m venv .venv && .venv/bin/pip install -e ".[dev]"
 0 7 * * * cd /path/to/JobHunt && .venv/bin/jobhunt run
 ```
 
-See `jobhunt/` for that implementation; `pytest -q` runs its 19 tests.
+See `jobhunt/` for that implementation; `pytest -q` runs its 37 tests.
 
-It has not been kept in lockstep with the app. Description fetching, duplicate
-grouping, and the editable profile are Android-only so far — the Python version
-still dedupes by `source:id` alone and builds its profile from resumes plus a
+Description fetching and duplicate grouping work the same way in both, and the
+two dedupe modules are kept deliberately in step. The editable profile is still
+Android-only: the Python version builds its profile from resumes plus a
 settings field.
 
 ## A note on scraping

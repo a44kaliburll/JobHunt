@@ -51,8 +51,17 @@ class Scraper:
             )
         return self._client
 
+    #: Whether :meth:`describe` can fill in a description this board's search
+    #: results leave out. Fetching one costs a request per posting, so the
+    #: pipeline only spends that on a budgeted shortlist of candidates.
+    supports_descriptions = False
+
     def search(self, query: SearchQuery) -> list[JobPosting]:
         raise NotImplementedError
+
+    def describe(self, posting: JobPosting) -> str | None:
+        """The full description for *posting*, or None if it can't be read."""
+        return None
 
     def safe_search(self, query: SearchQuery) -> tuple[list[JobPosting], str | None]:
         """Run search, never raising; returns (postings, error_or_None)."""

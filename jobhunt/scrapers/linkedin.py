@@ -17,12 +17,18 @@ from .base import JobPosting, Scraper, SearchQuery
 SEARCH_URL = (
     "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search"
 )
+DETAIL_URL = "https://www.linkedin.com/jobs-guest/jobs/api/jobPosting"
 JOB_ID_RE = re.compile(r"-?(\d{6,})(?:\?|$)")
 
 
 class LinkedInScraper(Scraper):
     name = "LinkedIn"
     key_prefix = "li"
+
+    # Guest search returns cards only — title, company, location, date — so a
+    # LinkedIn listing would otherwise be scored on its title alone, leaving
+    # the skills and duties halves of the score permanently unreachable.
+    supports_descriptions = True
 
     def search(self, query: SearchQuery) -> list[JobPosting]:
         params = {
@@ -64,3 +70,24 @@ class LinkedInScraper(Scraper):
                 )
             )
         return postings
+
+    def describe(self, posting: JobPosting) -> str | None:
+        job_id = posting.key.split(":", 1)[-1]
+        if not job_id:
+            return None
+        resp = self.client.get(f"{DETAIL_URL}/{job_id}")
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, "html.parser")
+        body = soup.select_one(".show-more-less-html__markup, .description__text")
+        if body is None:
+            return None
+        # Criteria (seniority, employment type, function) sit outside the body
+        # but carry vocabulary worth scoring against.
+        criteria = " ".join(
+            el.get_text(" ", strip=True)
+            for el in soup.select(".description__job-criteria-item")
+        )
+        text = " ".join(
+            part for part in (body.get_text(" ", strip=True), criteria) if part
+        )
+        return text[:4000] or None

@@ -14,13 +14,13 @@ from __future__ import annotations
 
 import datetime as dt
 import logging
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 
 import httpx
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from . import config, reports
+from . import config, dedupe, reports
 from .db import JobSource, Listing, Resume, RunLog, User
 from .matching import build_queries, location_in_range, score_posting
 from .resume.parser import merge_profiles
@@ -37,6 +37,10 @@ class RunResult:
     fetched: int = 0
     in_range: int = 0
     relevant: int = 0
+    #: Descriptions fetched for postings whose search results lacked one.
+    enriched: int = 0
+    #: Copies of a job folded into another copy rather than listed twice.
+    duplicates: int = 0
     new_count: int = 0
     queries: list[str] = field(default_factory=list)
     errors: list[str] = field(default_factory=list)
@@ -84,7 +88,7 @@ def run_for_user(
         db.scalars(select(Listing.key).where(Listing.user_id == user.id)).all()
     )
 
-    seen_this_run: dict[str, JobPosting] = {}
+    seen_this_run: dict[str, tuple[JobPosting, object]] = {}
     for scraper in scrapers:
         for query in queries:
             postings, error = scraper.safe_search(query)
@@ -97,19 +101,31 @@ def run_for_user(
             for posting in postings:
                 result.fetched += 1
                 if posting.key not in seen_this_run:
-                    seen_this_run[posting.key] = posting
+                    seen_this_run[posting.key] = (posting, scraper)
 
-    # Funnel: location filter, then score threshold.
+    in_range = [
+        pair
+        for pair in seen_this_run.values()
+        if location_in_range(pair[0].location, user.locations)
+    ]
+    result.in_range = len(in_range)
+
+    enriched, result.enriched, enrich_errors = _enrich(in_range, profile)
+    result.errors.extend(enrich_errors)
+
+    # Funnel: score threshold, then collapse duplicate copies of one job.
     min_score = user.min_score or config.DEFAULT_MIN_SCORE
-    scored: list[tuple[JobPosting, int]] = []
-    for posting in seen_this_run.values():
-        if not location_in_range(posting.location, user.locations):
-            continue
-        result.in_range += 1
+    relevant: list[tuple[JobPosting, int]] = []
+    for posting in enriched:
         score = score_posting(posting, profile).total
         if score >= min_score:
-            result.relevant += 1
-            scored.append((posting, score))
+            relevant.append((posting, score))
+    result.relevant = len(relevant)
+
+    merged = dedupe.collapse(relevant)
+    result.duplicates = len(relevant) - len(merged)
+    scored = [(job.posting, job.score) for job in merged]
+    group_keys = {job.posting.key: job for job in merged}
 
     # Reset NEW flags from the previous run, then upsert.
     for listing in db.scalars(
@@ -117,7 +133,19 @@ def run_for_user(
     ):
         listing.is_new = False
 
+    existing_groups = {
+        listing.group_key: listing
+        for listing in db.scalars(select(Listing).where(Listing.user_id == user.id))
+        if listing.group_key
+    }
+
     for posting, score in scored:
+        job = group_keys[posting.key]
+        twin = existing_groups.get(job.group_key)
+        if posting.key not in existing_keys and twin is not None:
+            # Same job, new vacancy id: keep the stored copy, bump its score.
+            twin.score = max(twin.score, score)
+            continue
         if posting.key in existing_keys:
             existing = db.scalar(
                 select(Listing).where(
@@ -137,6 +165,8 @@ def run_for_user(
             source=posting.source,
             posted=posting.posted[:32],
             score=score,
+            group_key=job.group_key,
+            also_posted_by="\n".join(job.also_posted_by),
             first_seen=today.isoformat(),
             is_new=True,
         )
@@ -164,6 +194,53 @@ def run_for_user(
 
     result.digest_path = str(reports.write_reports(db, user, result))
     return result
+
+
+def _enrich(
+    candidates: list[tuple[JobPosting, object]],
+    profile: dict,
+) -> tuple[list[JobPosting], int, list[str]]:
+    """Fill in descriptions the search results left out.
+
+    Every fetch is one more request to a board that would rather we did not, so
+    the budget is spent on the postings most likely to survive scoring: the
+    shortlist is ranked by the score they already have on title alone.
+    """
+    shortlist = {
+        posting.key
+        for posting, _ in sorted(
+            (
+                pair
+                for pair in candidates
+                if not pair[0].description
+                and getattr(pair[1], "supports_descriptions", False)
+            ),
+            key=lambda pair: score_posting(pair[0], profile).total,
+            reverse=True,
+        )[: config.DESCRIPTION_BUDGET]
+    }
+    if not shortlist:
+        return [posting for posting, _ in candidates], 0, []
+
+    count = 0
+    errors: list[str] = []
+    postings: list[JobPosting] = []
+    for posting, scraper in candidates:
+        if posting.key not in shortlist:
+            postings.append(posting)
+            continue
+        try:
+            description = scraper.describe(posting)
+        except Exception as exc:
+            errors.append(f"{scraper.name} description: {exc}")
+            description = None
+        if description:
+            count += 1
+            postings.append(replace(posting, description=description))
+        else:
+            postings.append(posting)
+    # One board rate-limiting mid-run shouldn't bury the digest in noise.
+    return postings, count, list(dict.fromkeys(errors))[:3]
 
 
 def run_all_users(db: Session, client: httpx.Client | None = None) -> list[RunResult]:
