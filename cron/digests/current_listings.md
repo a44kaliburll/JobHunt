@@ -1,33 +1,65 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-09-15 15:38_
-_Active listings: **21** (90-day retention)_
+_Last refreshed: 2026-09-16 15:28_
+_Active listings: **26** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-09-16
+
+### **🆕 NEW** — Assistant Director of SUNY Procurement Development and Engagement — The State University of New York
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-16
+- **Apply:** https://www.linkedin.com/jobs/view/assistant-director-of-suny-procurement-development-and-engagement-at-the-state-university-of-new-york-4448529199
+
+### **🆕 NEW** — SAP SuccessFactors Learning Management System (LMS) Manager — Accenture
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-09-15
+- **Apply:** https://www.linkedin.com/jobs/view/sap-successfactors-learning-management-system-lms-manager-at-accenture-4466577450
+
+### **🆕 NEW** — Team Manager, Training — Pearson
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-16
+- **Apply:** https://www.linkedin.com/jobs/view/team-manager-training-at-pearson-4466597964
+
+### **🆕 NEW** — Nursing Program Director — Bryant & Stratton College
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-16
+- **Apply:** https://www.linkedin.com/jobs/view/nursing-program-director-at-bryant-stratton-college-4444125970
+
+### **🆕 NEW** — Medical Assisting Program Director — Bryant & Stratton College
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-16
+- **Apply:** https://www.linkedin.com/jobs/view/medical-assisting-program-director-at-bryant-stratton-college-4465219596
+
 ## 2026-09-15
 
-### **🆕 NEW** — Team Manager, Portfolio Management — Pearson
+### Team Manager, Portfolio Management — Pearson
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-15
 - **Apply:** https://www.linkedin.com/jobs/view/team-manager-portfolio-management-at-pearson-4466155840
 
-### **🆕 NEW** — Team Manager, Designer — Pearson
+### Team Manager, Designer — Pearson
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-14
 - **Apply:** https://www.linkedin.com/jobs/view/team-manager-designer-at-pearson-4466118253
 
-### **🆕 NEW** — Digital Content Specialist (NY HELPS) #2027-101 — Capital Region BOCES
+### Digital Content Specialist (NY HELPS) #2027-101 — Capital Region BOCES
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-11
 - **Apply:** https://www.linkedin.com/jobs/view/digital-content-specialist-ny-helps-%232027-101-at-capital-region-boces-4466303820
 
-### **🆕 NEW** — Albany, NY Global Technical Learning Center Technical Trainer — Applied Materials
+### Albany, NY Global Technical Learning Center Technical Trainer — Applied Materials
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-09
 - **Apply:** https://www.linkedin.com/jobs/view/albany-ny-global-technical-learning-center-technical-trainer-at-applied-materials-4450815526
 
 ## 2026-09-14
+
+### Udacity LearnVantage Mid-Market Account Success Management Senior Manager — Accenture
+- **Match:** [██░░░░░░░░] 20% (10/50)
+- **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-09-11
+- **Apply:** https://www.linkedin.com/jobs/view/udacity-learnvantage-mid-market-account-success-management-senior-manager-at-accenture-4464821653
 
 ### Education Designer UX UI and AI — Interaction Design Foundation
 - **Match:** [██░░░░░░░░] 20% (10/50)
@@ -58,11 +90,6 @@ Sorted by date first seen, newest first. **NEW** = surfaced in the most recent r
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-12
 - **Apply:** https://www.linkedin.com/jobs/view/manager-partnership-management-at-pearson-4465186568
-
-### Udacity LearnVantage Mid-Market Account Success Management Senior Manager — Accenture
-- **Match:** [█░░░░░░░░░] 14% (7/50)
-- **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-09-11
-- **Apply:** https://www.linkedin.com/jobs/view/udacity-learnvantage-mid-market-account-success-management-senior-manager-at-accenture-4464821653
 
 ### Manager, US West Region — Entrepreneurs' Organization
 - **Match:** [█░░░░░░░░░] 14% (7/50)
