@@ -1,33 +1,40 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-09-16 15:28_
-_Active listings: **26** (90-day retention)_
+_Last refreshed: 2026-09-17 15:36_
+_Active listings: **27** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-09-17
+
+### **🆕 NEW** — Principal Product Manager — DomainTools
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-09-16
+- **Apply:** https://remoteOK.com/remote-jobs/remote-principal-product-manager-domaintools-1137396
+
 ## 2026-09-16
 
-### **🆕 NEW** — Assistant Director of SUNY Procurement Development and Engagement — The State University of New York
+### Assistant Director of SUNY Procurement Development and Engagement — The State University of New York
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-16
 - **Apply:** https://www.linkedin.com/jobs/view/assistant-director-of-suny-procurement-development-and-engagement-at-the-state-university-of-new-york-4448529199
 
-### **🆕 NEW** — SAP SuccessFactors Learning Management System (LMS) Manager — Accenture
+### SAP SuccessFactors Learning Management System (LMS) Manager — Accenture
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-09-15
 - **Apply:** https://www.linkedin.com/jobs/view/sap-successfactors-learning-management-system-lms-manager-at-accenture-4466577450
 
-### **🆕 NEW** — Team Manager, Training — Pearson
+### Team Manager, Training — Pearson
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-16
 - **Apply:** https://www.linkedin.com/jobs/view/team-manager-training-at-pearson-4466597964
 
-### **🆕 NEW** — Nursing Program Director — Bryant & Stratton College
+### Nursing Program Director — Bryant & Stratton College
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-16
 - **Apply:** https://www.linkedin.com/jobs/view/nursing-program-director-at-bryant-stratton-college-4444125970
 
-### **🆕 NEW** — Medical Assisting Program Director — Bryant & Stratton College
+### Medical Assisting Program Director — Bryant & Stratton College
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-16
 - **Apply:** https://www.linkedin.com/jobs/view/medical-assisting-program-director-at-bryant-stratton-college-4465219596
