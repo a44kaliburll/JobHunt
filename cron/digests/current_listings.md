@@ -1,13 +1,13 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-09-17 15:36_
+_Last refreshed: 2026-09-18 15:04_
 _Active listings: **27** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
 ## 2026-09-17
 
-### **🆕 NEW** — Principal Product Manager — DomainTools
+### Principal Product Manager — DomainTools
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-09-16
 - **Apply:** https://remoteOK.com/remote-jobs/remote-principal-product-manager-domaintools-1137396
