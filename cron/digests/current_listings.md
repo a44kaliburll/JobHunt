@@ -1,9 +1,16 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-09-18 15:04_
-_Active listings: **27** (90-day retention)_
+_Last refreshed: 2026-09-19 14:35_
+_Active listings: **28** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
+
+## 2026-09-19
+
+### **🆕 NEW** — Manager of Professional Development — Harris Beach Murtha
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-19
+- **Apply:** https://www.linkedin.com/jobs/view/manager-of-professional-development-at-harris-beach-murtha-4441286584
 
 ## 2026-09-17
 
