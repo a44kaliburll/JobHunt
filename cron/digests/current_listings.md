@@ -1,13 +1,20 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-09-19 14:35_
-_Active listings: **28** (90-day retention)_
+_Last refreshed: 2026-09-20 14:46_
+_Active listings: **29** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-09-20
+
+### **🆕 NEW** — Customer Success Manager Mexico — JumpCloud
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Mexico City, Mexico - Remote | **Source:** RemoteOK | **Posted:** 2026-09-19
+- **Apply:** https://remoteOK.com/remote-jobs/remote-customer-success-manager-mexico-jumpcloud-1137406
+
 ## 2026-09-19
 
-### **🆕 NEW** — Manager of Professional Development — Harris Beach Murtha
+### Manager of Professional Development — Harris Beach Murtha
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-19
 - **Apply:** https://www.linkedin.com/jobs/view/manager-of-professional-development-at-harris-beach-murtha-4441286584
