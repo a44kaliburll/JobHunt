@@ -1,28 +1,35 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-09-21 17:08_
-_Active listings: **33** (90-day retention)_
+_Last refreshed: 2026-09-22 15:34_
+_Active listings: **34** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-09-22
+
+### **🆕 NEW** — Education Programs Manager — Junior Achievement of Northeastern New York, Inc.
+- **Match:** [██░░░░░░░░] 20% (10/50)
+- **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-09-21
+- **Apply:** https://www.linkedin.com/jobs/view/education-programs-manager-at-junior-achievement-of-northeastern-new-york-inc-4469980246
+
 ## 2026-09-21
 
-### **🆕 NEW** — Advanced Specialist, Experience Design — Pearson
+### Advanced Specialist, Experience Design — Pearson
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-15
 - **Apply:** https://www.linkedin.com/jobs/view/advanced-specialist-experience-design-at-pearson-4467769505
 
-### **🆕 NEW** — Digital Marketing Strategy Specialist — Accenture
+### Digital Marketing Strategy Specialist — Accenture
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-09-20
 - **Apply:** https://www.linkedin.com/jobs/view/digital-marketing-strategy-specialist-at-accenture-4468418255
 
-### **🆕 NEW** — Quality Assurance Manager (Project Coordinator) — NYS Office of Information Technology Services
+### Quality Assurance Manager (Project Coordinator) — NYS Office of Information Technology Services
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-16
 - **Apply:** https://www.linkedin.com/jobs/view/quality-assurance-manager-project-coordinator-at-nys-office-of-information-technology-services-4468250515
 
-### **🆕 NEW** — Director of End User Services — Empire State University
+### Director of End User Services — Empire State University
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Saratoga Springs, NY | **Source:** LinkedIn | **Posted:** 2026-09-21
 - **Apply:** https://www.linkedin.com/jobs/view/director-of-end-user-services-at-empire-state-university-4469918550
