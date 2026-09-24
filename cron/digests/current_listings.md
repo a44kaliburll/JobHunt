@@ -1,53 +1,65 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-09-23 15:30_
-_Active listings: **43** (90-day retention)_
+_Last refreshed: 2026-09-24 15:52_
+_Active listings: **45** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-09-24
+
+### **🆕 NEW** — Senior Program Manager, Workforce Development — Empire State Development
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-23
+- **Apply:** https://www.linkedin.com/jobs/view/senior-program-manager-workforce-development-at-empire-state-development-4442740748
+
+### **🆕 NEW** — LearnVantage Mid-Market Client Account Management Senior Manager — Accenture
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-09-24
+- **Apply:** https://www.linkedin.com/jobs/view/learnvantage-mid-market-client-account-management-senior-manager-at-accenture-4471421467
+
 ## 2026-09-23
 
-### **🆕 NEW** — Learning & Development Partner Manager, Life Sciences — Accenture
+### Learning & Development Partner Manager, Life Sciences — Accenture
 - **Match:** [███░░░░░░░] 32% (16/50)
 - **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-09-23
 - **Apply:** https://www.linkedin.com/jobs/view/learning-development-partner-manager-life-sciences-at-accenture-4469443781
 
-### **🆕 NEW** — Senior Program Manager- AI Learning Operations — Accenture
+### Senior Program Manager- AI Learning Operations — Accenture
 - **Match:** [██░░░░░░░░] 20% (10/50)
 - **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-09-23
 - **Apply:** https://www.linkedin.com/jobs/view/senior-program-manager-ai-learning-operations-at-accenture-4469451498
 
-### **🆕 NEW** — Senior Director- Human Resources — Excelsior University
+### Senior Director- Human Resources — Excelsior University
 - **Match:** [██░░░░░░░░] 20% (10/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-21
 - **Apply:** https://www.linkedin.com/jobs/view/senior-director-human-resources-at-excelsior-university-4468160255
 
-### **🆕 NEW** — SHMG Float Pool and Education Coordinator — Saratoga Hospital
+### SHMG Float Pool and Education Coordinator — Saratoga Hospital
 - **Match:** [██░░░░░░░░] 20% (10/50)
 - **Location:** Saratoga Springs, NY | **Source:** LinkedIn | **Posted:** 2026-09-18
 - **Apply:** https://www.linkedin.com/jobs/view/shmg-float-pool-and-education-coordinator-at-saratoga-hospital-4469238776
 
-### **🆕 NEW** — SDC Front End Engineer---Manager---Raleigh, NC or Dallas, TX — EY
+### SDC Front End Engineer---Manager---Raleigh, NC or Dallas, TX — EY
 - **Match:** [██░░░░░░░░] 20% (10/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-23
 - **Apply:** https://www.linkedin.com/jobs/view/sdc-front-end-engineer-manager-raleigh-nc-or-dallas-tx-at-ey-4468920609
 
-### **🆕 NEW** — Learning Technology Manager — Accenture
+### Learning Technology Manager — Accenture
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-09-23
 - **Apply:** https://www.linkedin.com/jobs/view/learning-technology-manager-at-accenture-4469453450
 
-### **🆕 NEW** — Junior Digital Assets Operations Analyst — Omega Enterprises
+### Junior Digital Assets Operations Analyst — Omega Enterprises
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-09-22
 - **Apply:** https://remoteOK.com/remote-jobs/remote-junior-digital-assets-operations-analyst-omega-enterprises-1137418
 
-### **🆕 NEW** — Sr. Product Sales Manager (Starlink Maritime) — SpaceX
+### Sr. Product Sales Manager (Starlink Maritime) — SpaceX
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** El Segundo, CA, Flexible / Remote, Lockhart, TX, Palo Alto, CA, Redmond, WA | **Source:** TheMuse | **Posted:** 2026-09-22
 - **Apply:** https://www.themuse.com/jobs/spacex/sr-product-sales-manager-starlink-maritime-b975fb
 
-### **🆕 NEW** — Multimedia Production Program Specialist 2 - Albany (NY HELPS) — New York State Department of Labor
+### Multimedia Production Program Specialist 2 - Albany (NY HELPS) — New York State Department of Labor
 - **Match:** [█░░░░░░░░░] 12% (6/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-18
 - **Apply:** https://www.linkedin.com/jobs/view/multimedia-production-program-specialist-2-albany-ny-helps-at-new-york-state-department-of-labor-4469254609
