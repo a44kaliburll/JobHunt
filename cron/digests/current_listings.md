@@ -1,18 +1,40 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-09-24 15:52_
-_Active listings: **45** (90-day retention)_
+_Last refreshed: 2026-09-25 15:53_
+_Active listings: **49** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-09-25
+
+### **🆕 NEW** — Instructional Designer — Excelsior University
+- **Match:** [████░░░░░░] 44% (22/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-24
+- **Apply:** https://www.linkedin.com/jobs/view/instructional-designer-at-excelsior-university-4470022908
+
+### **🆕 NEW** — Exec Director -BI, Data Platforms, and Applied AI — Excelsior University
+- **Match:** [██░░░░░░░░] 20% (10/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-24
+- **Apply:** https://www.linkedin.com/jobs/view/exec-director-bi-data-platforms-and-applied-ai-at-excelsior-university-4458028713
+
+### **🆕 NEW** — Director of Holistic Advisement (1 Year Appointment) — The State University of New York
+- **Match:** [██░░░░░░░░] 20% (10/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-24
+- **Apply:** https://www.linkedin.com/jobs/view/director-of-holistic-advisement-1-year-appointment-at-the-state-university-of-new-york-4461330208
+
+### **🆕 NEW** — Senior Product Sales Manager (Academia) — Clarivate
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-24
+- **Apply:** https://www.linkedin.com/jobs/view/senior-product-sales-manager-academia-at-clarivate-4453656508
+
 ## 2026-09-24
 
-### **🆕 NEW** — Senior Program Manager, Workforce Development — Empire State Development
+### Senior Program Manager, Workforce Development — Empire State Development
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-23
 - **Apply:** https://www.linkedin.com/jobs/view/senior-program-manager-workforce-development-at-empire-state-development-4442740748
 
-### **🆕 NEW** — LearnVantage Mid-Market Client Account Management Senior Manager — Accenture
+### LearnVantage Mid-Market Client Account Management Senior Manager — Accenture
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-09-24
 - **Apply:** https://www.linkedin.com/jobs/view/learnvantage-mid-market-client-account-management-senior-manager-at-accenture-4471421467
