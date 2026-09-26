@@ -1,28 +1,35 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-09-25 15:53_
-_Active listings: **49** (90-day retention)_
+_Last refreshed: 2026-09-26 15:03_
+_Active listings: **50** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-09-26
+
+### **🆕 NEW** — Artificial Intelligence Internship Program Manager — The State University of New York
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-26
+- **Apply:** https://www.linkedin.com/jobs/view/artificial-intelligence-internship-program-manager-at-the-state-university-of-new-york-4453716121
+
 ## 2026-09-25
 
-### **🆕 NEW** — Instructional Designer — Excelsior University
+### Instructional Designer — Excelsior University
 - **Match:** [████░░░░░░] 44% (22/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-24
 - **Apply:** https://www.linkedin.com/jobs/view/instructional-designer-at-excelsior-university-4470022908
 
-### **🆕 NEW** — Exec Director -BI, Data Platforms, and Applied AI — Excelsior University
+### Exec Director -BI, Data Platforms, and Applied AI — Excelsior University
 - **Match:** [██░░░░░░░░] 20% (10/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-24
 - **Apply:** https://www.linkedin.com/jobs/view/exec-director-bi-data-platforms-and-applied-ai-at-excelsior-university-4458028713
 
-### **🆕 NEW** — Director of Holistic Advisement (1 Year Appointment) — The State University of New York
+### Director of Holistic Advisement (1 Year Appointment) — The State University of New York
 - **Match:** [██░░░░░░░░] 20% (10/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-24
 - **Apply:** https://www.linkedin.com/jobs/view/director-of-holistic-advisement-1-year-appointment-at-the-state-university-of-new-york-4461330208
 
-### **🆕 NEW** — Senior Product Sales Manager (Academia) — Clarivate
+### Senior Product Sales Manager (Academia) — Clarivate
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-24
 - **Apply:** https://www.linkedin.com/jobs/view/senior-product-sales-manager-academia-at-clarivate-4453656508
