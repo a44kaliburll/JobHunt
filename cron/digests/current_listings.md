@@ -1,13 +1,13 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-09-26 15:03_
+_Last refreshed: 2026-09-27 15:43_
 _Active listings: **50** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
 ## 2026-09-26
 
-### **🆕 NEW** — Artificial Intelligence Internship Program Manager — The State University of New York
+### Artificial Intelligence Internship Program Manager — The State University of New York
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-26
 - **Apply:** https://www.linkedin.com/jobs/view/artificial-intelligence-internship-program-manager-at-the-state-university-of-new-york-4453716121
