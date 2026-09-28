@@ -1,6 +1,6 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-09-27 15:43_
+_Last refreshed: 2026-09-28 18:40_
 _Active listings: **50** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
