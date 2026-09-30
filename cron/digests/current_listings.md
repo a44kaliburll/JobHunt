@@ -1,13 +1,13 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-09-29 16:57_
+_Last refreshed: 2026-09-30 16:54_
 _Active listings: **51** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
 ## 2026-09-29
 
-### **🆕 NEW** — Manager, Content Developer — Pearson
+### Manager, Content Developer — Pearson
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-29
 - **Apply:** https://www.linkedin.com/jobs/view/manager-content-developer-at-pearson-4471592403
