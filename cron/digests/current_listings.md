@@ -1,9 +1,16 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-09-30 16:54_
-_Active listings: **51** (90-day retention)_
+_Last refreshed: 2026-10-01 17:26_
+_Active listings: **52** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
+
+## 2026-10-01
+
+### **🆕 NEW** — Team Manager, Experience Design — Pearson
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-30
+- **Apply:** https://www.linkedin.com/jobs/view/team-manager-experience-design-at-pearson-4472332824
 
 ## 2026-09-29
 
