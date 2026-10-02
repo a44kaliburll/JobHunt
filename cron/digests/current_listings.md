@@ -1,13 +1,20 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-10-01 17:26_
-_Active listings: **52** (90-day retention)_
+_Last refreshed: 2026-10-02 16:45_
+_Active listings: **53** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-10-02
+
+### **🆕 NEW** — Manager, Sales Housing & Vendor Operations — Sunrun
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Flexible / Remote | **Source:** TheMuse | **Posted:** 2026-10-01
+- **Apply:** https://www.themuse.com/jobs/sunrun/manager-sales-housing-vendor-operations
+
 ## 2026-10-01
 
-### **🆕 NEW** — Team Manager, Experience Design — Pearson
+### Team Manager, Experience Design — Pearson
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-09-30
 - **Apply:** https://www.linkedin.com/jobs/view/team-manager-experience-design-at-pearson-4472332824
