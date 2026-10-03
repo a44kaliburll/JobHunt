@@ -1,13 +1,13 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-10-02 16:45_
+_Last refreshed: 2026-10-03 15:11_
 _Active listings: **53** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
 ## 2026-10-02
 
-### **🆕 NEW** — Manager, Sales Housing & Vendor Operations — Sunrun
+### Manager, Sales Housing & Vendor Operations — Sunrun
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Flexible / Remote | **Source:** TheMuse | **Posted:** 2026-10-01
 - **Apply:** https://www.themuse.com/jobs/sunrun/manager-sales-housing-vendor-operations
