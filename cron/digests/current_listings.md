@@ -1,23 +1,23 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-10-06 17:20_
+_Last refreshed: 2026-10-07 17:53_
 _Active listings: **56** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
 ## 2026-10-06
 
-### **🆕 NEW** — Training Manager — Hunger Solutions New York
+### Training Manager — Hunger Solutions New York
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-05
 - **Apply:** https://www.linkedin.com/jobs/view/training-manager-at-hunger-solutions-new-york-4474611587
 
-### **🆕 NEW** — Marketing Manager — KPMG US
+### Marketing Manager — KPMG US
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-05
 - **Apply:** https://www.linkedin.com/jobs/view/marketing-manager-at-kpmg-us-4474638161
 
-### **🆕 NEW** — Federal Business Development Director — Fortanix
+### Federal Business Development Director — Fortanix
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-10-04
 - **Apply:** https://remoteOK.com/remote-jobs/remote-federal-business-development-director-fortanix-1137463
