@@ -1,9 +1,31 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-10-07 17:53_
-_Active listings: **56** (90-day retention)_
+_Last refreshed: 2026-10-08 17:56_
+_Active listings: **60** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
+
+## 2026-10-08
+
+### **🆕 NEW** — Project Manager — Spiralyze
+- **Match:** [██░░░░░░░░] 20% (10/50)
+- **Location:** Worldwide | **Source:** RemoteOK | **Posted:** 2026-10-06
+- **Apply:** https://remoteOK.com/remote-jobs/remote-project-manager-spiralyze-1137466
+
+### **🆕 NEW** — Sales Enablement Manager — Fireworks AI
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Utica-Rome Area | **Source:** LinkedIn | **Posted:** 2026-10-07
+- **Apply:** https://www.linkedin.com/jobs/view/sales-enablement-manager-at-fireworks-ai-4467910193
+
+### **🆕 NEW** — Software Engineering Team Manager — Pearson
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-08
+- **Apply:** https://www.linkedin.com/jobs/view/software-engineering-team-manager-at-pearson-4435295640
+
+### **🆕 NEW** — Client Director - Cardinal Health — Celonis
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Flexible / Remote | **Source:** TheMuse | **Posted:** 2026-10-07
+- **Apply:** https://www.themuse.com/jobs/celonis/client-director-cardinal-health-4938fc
 
 ## 2026-10-06
 
