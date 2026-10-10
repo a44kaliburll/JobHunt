@@ -1,9 +1,16 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-10-09 17:30_
-_Active listings: **60** (90-day retention)_
+_Last refreshed: 2026-10-10 16:18_
+_Active listings: **61** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
+
+## 2026-10-10
+
+### **🆕 NEW** — Product Design Lead — Fuel50
+- **Match:** [███░░░░░░░] 26% (13/50)
+- **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-10-09
+- **Apply:** https://remoteOK.com/remote-jobs/remote-product-design-lead-fuel50-1137474
 
 ## 2026-10-08
 
