@@ -1,13 +1,25 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-10-10 16:18_
-_Active listings: **61** (90-day retention)_
+_Last refreshed: 2026-10-11 16:42_
+_Active listings: **63** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-10-11
+
+### **🆕 NEW** — Academic Dean for MiaPrep Online Academy of Ohio — Miaplaza
+- **Match:** [███░░░░░░░] 26% (13/50)
+- **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-10-10
+- **Apply:** https://remoteOK.com/remote-jobs/remote-academic-dean-for-miaprep-online-academy-of-ohio-miaplaza-1137479
+
+### **🆕 NEW** — Manager Clinical Data Management — EDETEK
+- **Match:** [██░░░░░░░░] 20% (10/50)
+- **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-10-10
+- **Apply:** https://remoteOK.com/remote-jobs/remote-manager-clinical-data-management-edetek-1137481
+
 ## 2026-10-10
 
-### **🆕 NEW** — Product Design Lead — Fuel50
+### Product Design Lead — Fuel50
 - **Match:** [███░░░░░░░] 26% (13/50)
 - **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-10-09
 - **Apply:** https://remoteOK.com/remote-jobs/remote-product-design-lead-fuel50-1137474
