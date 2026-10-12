@@ -1,18 +1,35 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-10-11 16:42_
-_Active listings: **63** (90-day retention)_
+_Last refreshed: 2026-10-12 20:22_
+_Active listings: **66** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-10-12
+
+### **🆕 NEW** — FT Faculty-Clinical Education Lead — Excelsior University
+- **Match:** [██░░░░░░░░] 20% (10/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-08
+- **Apply:** https://www.linkedin.com/jobs/view/ft-faculty-clinical-education-lead-at-excelsior-university-4474849097
+
+### **🆕 NEW** — Training Coordinator or Instructional Designer — Innovee Consulting LLC
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-07
+- **Apply:** https://www.linkedin.com/jobs/view/training-coordinator-or-instructional-designer-at-innovee-consulting-llc-4476928496
+
+### **🆕 NEW** — Digital Producer — Times Union Media Group
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-08
+- **Apply:** https://www.linkedin.com/jobs/view/digital-producer-at-times-union-media-group-4466206326
+
 ## 2026-10-11
 
-### **🆕 NEW** — Academic Dean for MiaPrep Online Academy of Ohio — Miaplaza
+### Academic Dean for MiaPrep Online Academy of Ohio — Miaplaza
 - **Match:** [███░░░░░░░] 26% (13/50)
 - **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-10-10
 - **Apply:** https://remoteOK.com/remote-jobs/remote-academic-dean-for-miaprep-online-academy-of-ohio-miaplaza-1137479
 
-### **🆕 NEW** — Manager Clinical Data Management — EDETEK
+### Manager Clinical Data Management — EDETEK
 - **Match:** [██░░░░░░░░] 20% (10/50)
 - **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-10-10
 - **Apply:** https://remoteOK.com/remote-jobs/remote-manager-clinical-data-management-edetek-1137481
