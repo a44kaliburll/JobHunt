@@ -1,23 +1,23 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-10-12 20:22_
+_Last refreshed: 2026-10-13 18:25_
 _Active listings: **66** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
 ## 2026-10-12
 
-### **🆕 NEW** — FT Faculty-Clinical Education Lead — Excelsior University
+### FT Faculty-Clinical Education Lead — Excelsior University
 - **Match:** [██░░░░░░░░] 20% (10/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-08
 - **Apply:** https://www.linkedin.com/jobs/view/ft-faculty-clinical-education-lead-at-excelsior-university-4474849097
 
-### **🆕 NEW** — Training Coordinator or Instructional Designer — Innovee Consulting LLC
+### Training Coordinator or Instructional Designer — Innovee Consulting LLC
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-07
 - **Apply:** https://www.linkedin.com/jobs/view/training-coordinator-or-instructional-designer-at-innovee-consulting-llc-4476928496
 
-### **🆕 NEW** — Digital Producer — Times Union Media Group
+### Digital Producer — Times Union Media Group
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-08
 - **Apply:** https://www.linkedin.com/jobs/view/digital-producer-at-times-union-media-group-4466206326
