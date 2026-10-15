@@ -1,23 +1,45 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-10-14 15:53_
-_Active listings: **69** (90-day retention)_
+_Last refreshed: 2026-10-15 15:40_
+_Active listings: **73** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-10-15
+
+### **🆕 NEW** — Manager, Digital Enablement — KPMG US
+- **Match:** [███░░░░░░░] 26% (13/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-15
+- **Apply:** https://www.linkedin.com/jobs/view/manager-digital-enablement-at-kpmg-us-4478844175
+
+### **🆕 NEW** — Lead Director Digital Product - Chronic Condition Management — CVS Health
+- **Match:** [███░░░░░░░] 26% (13/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-15
+- **Apply:** https://www.linkedin.com/jobs/view/lead-director-digital-product-chronic-condition-management-at-cvs-health-4479820641
+
+### **🆕 NEW** — Digital Marketing and Multimedia Content Specialist (26459) — Northern Rivers Family of Services
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-14
+- **Apply:** https://www.linkedin.com/jobs/view/digital-marketing-and-multimedia-content-specialist-26459-at-northern-rivers-family-of-services-4477013379
+
+### **🆕 NEW** — Lecturer in Game Design & Development — University at Albany
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-12
+- **Apply:** https://www.linkedin.com/jobs/view/lecturer-in-game-design-development-at-university-at-albany-4479032007
+
 ## 2026-10-14
 
-### **🆕 NEW** — Learning Lab Clinical Course Chair for St Peters School of Nursing — Trinity Health
+### Learning Lab Clinical Course Chair for St Peters School of Nursing — Trinity Health
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-08
 - **Apply:** https://www.linkedin.com/jobs/view/learning-lab-clinical-course-chair-for-st-peters-school-of-nursing-at-trinity-health-4477413376
 
-### **🆕 NEW** — Web Designer & Digital Strategist — Union College
+### Web Designer & Digital Strategist — Union College
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Schenectady, NY | **Source:** LinkedIn | **Posted:** 2026-10-13
 - **Apply:** https://www.linkedin.com/jobs/view/web-designer-digital-strategist-at-union-college-4476462103
 
-### **🆕 NEW** — Principal Product Manager Strategic Initiatives — Thyme Care
+### Principal Product Manager Strategic Initiatives — Thyme Care
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-10-13
 - **Apply:** https://remoteOK.com/remote-jobs/remote-principal-product-manager-strategic-initiatives-thyme-care-1137510
