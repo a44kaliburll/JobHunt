@@ -1,33 +1,33 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-10-16 15:26_
+_Last refreshed: 2026-10-17 14:18_
 _Active listings: **78** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
 ## 2026-10-16
 
-### **🆕 NEW** — Technical Training Program Manager — GE Vernova
+### Technical Training Program Manager — GE Vernova
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Schenectady, NY | **Source:** LinkedIn | **Posted:** 2026-10-15
 - **Apply:** https://www.linkedin.com/jobs/view/technical-training-program-manager-at-ge-vernova-4480184191
 
-### **🆕 NEW** — Manager, Content Marketing (Front Office/Ops/HR) — KPMG US
+### Manager, Content Marketing (Front Office/Ops/HR) — KPMG US
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-16
 - **Apply:** https://www.linkedin.com/jobs/view/manager-content-marketing-front-office-ops-hr-at-kpmg-us-4479323093
 
-### **🆕 NEW** — Director US Tax & Accounting #35344 — Manila Recruitment
+### Director US Tax & Accounting #35344 — Manila Recruitment
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-10-15
 - **Apply:** https://remoteOK.com/remote-jobs/remote-director-us-tax-accounting-35344-manila-recruitment-1137525
 
-### **🆕 NEW** — Contracts Manager Federal — Akicita Federal, LLC
+### Contracts Manager Federal — Akicita Federal, LLC
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-10-15
 - **Apply:** https://remoteOK.com/remote-jobs/remote-contracts-manager-federal-akicita-federal-llc-1137522
 
-### **🆕 NEW** — Federal Account Manager Client Relationships — Akicita Federal, LLC
+### Federal Account Manager Client Relationships — Akicita Federal, LLC
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-10-15
 - **Apply:** https://remoteOK.com/remote-jobs/remote-federal-account-manager-client-relationships-akicita-federal-llc-1137521
