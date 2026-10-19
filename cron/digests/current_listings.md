@@ -1,23 +1,23 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-10-18 14:43_
+_Last refreshed: 2026-10-19 17:38_
 _Active listings: **81** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
 ## 2026-10-18
 
-### **🆕 NEW** — Director of Product Management and IT Operations — Self Bill Pro
+### Director of Product Management and IT Operations — Self Bill Pro
 - **Match:** [██░░░░░░░░] 20% (10/50)
 - **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-10-16
 - **Apply:** https://remoteOK.com/remote-jobs/remote-director-of-product-management-and-it-operations-self-bill-pro-1137536
 
-### **🆕 NEW** — Manager, Content Marketing (Technology) — KPMG US
+### Manager, Content Marketing (Technology) — KPMG US
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-16
 - **Apply:** https://www.linkedin.com/jobs/view/manager-content-marketing-technology-at-kpmg-us-4479378752
 
-### **🆕 NEW** — Commercial Account Manager LATAM — Apryse
+### Commercial Account Manager LATAM — Apryse
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-10-17
 - **Apply:** https://remoteOK.com/remote-jobs/remote-commercial-account-manager-latam-apryse-1137539
