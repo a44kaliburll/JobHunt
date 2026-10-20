@@ -1,9 +1,21 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-10-19 17:38_
-_Active listings: **81** (90-day retention)_
+_Last refreshed: 2026-10-20 15:43_
+_Active listings: **83** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
+
+## 2026-10-20
+
+### **🆕 NEW** — Director, Fundraising Training & Enablement — American Red Cross
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-20
+- **Apply:** https://www.linkedin.com/jobs/view/director-fundraising-training-enablement-at-american-red-cross-4481598287
+
+### **🆕 NEW** — Associate Director/ Director, Content Innovation & Visualization — S&P Global
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-19
+- **Apply:** https://www.linkedin.com/jobs/view/associate-director-director-content-innovation-visualization-at-s-p-global-4479941875
 
 ## 2026-10-18
 
