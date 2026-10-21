@@ -1,18 +1,35 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-10-20 15:43_
-_Active listings: **83** (90-day retention)_
+_Last refreshed: 2026-10-21 16:01_
+_Active listings: **86** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-10-21
+
+### **🆕 NEW** — Advisory Internal Communications Manager — PwC
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-21
+- **Apply:** https://www.linkedin.com/jobs/view/advisory-internal-communications-manager-at-pwc-4482007414
+
+### **🆕 NEW** — Public Information Specialist 3 (Digital Content) - VID 227410 — NYS Office of General Services
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-21
+- **Apply:** https://www.linkedin.com/jobs/view/public-information-specialist-3-digital-content-vid-227410-at-nys-office-of-general-services-4481118852
+
+### **🆕 NEW** — Director for Inclusive Excellence and Institutional Success — The State University of New York
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-20
+- **Apply:** https://www.linkedin.com/jobs/view/director-for-inclusive-excellence-and-institutional-success-at-the-state-university-of-new-york-4480400701
+
 ## 2026-10-20
 
-### **🆕 NEW** — Director, Fundraising Training & Enablement — American Red Cross
+### Director, Fundraising Training & Enablement — American Red Cross
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-20
 - **Apply:** https://www.linkedin.com/jobs/view/director-fundraising-training-enablement-at-american-red-cross-4481598287
 
-### **🆕 NEW** — Associate Director/ Director, Content Innovation & Visualization — S&P Global
+### Associate Director/ Director, Content Innovation & Visualization — S&P Global
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-19
 - **Apply:** https://www.linkedin.com/jobs/view/associate-director-director-content-innovation-visualization-at-s-p-global-4479941875
