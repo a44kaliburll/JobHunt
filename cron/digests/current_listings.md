@@ -1,23 +1,30 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-10-21 16:01_
-_Active listings: **86** (90-day retention)_
+_Last refreshed: 2026-10-22 15:56_
+_Active listings: **87** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-10-22
+
+### **🆕 NEW** — Clinical Data Manager — Penumbra
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Your Remote US Home Office | **Source:** RemoteOK | **Posted:** 2026-10-21
+- **Apply:** https://remoteOK.com/remote-jobs/remote-clinical-data-manager-penumbra-1137550
+
 ## 2026-10-21
 
-### **🆕 NEW** — Advisory Internal Communications Manager — PwC
+### Advisory Internal Communications Manager — PwC
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-21
 - **Apply:** https://www.linkedin.com/jobs/view/advisory-internal-communications-manager-at-pwc-4482007414
 
-### **🆕 NEW** — Public Information Specialist 3 (Digital Content) - VID 227410 — NYS Office of General Services
+### Public Information Specialist 3 (Digital Content) - VID 227410 — NYS Office of General Services
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-21
 - **Apply:** https://www.linkedin.com/jobs/view/public-information-specialist-3-digital-content-vid-227410-at-nys-office-of-general-services-4481118852
 
-### **🆕 NEW** — Director for Inclusive Excellence and Institutional Success — The State University of New York
+### Director for Inclusive Excellence and Institutional Success — The State University of New York
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-20
 - **Apply:** https://www.linkedin.com/jobs/view/director-for-inclusive-excellence-and-institutional-success-at-the-state-university-of-new-york-4480400701
