@@ -1,13 +1,50 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-10-22 15:56_
-_Active listings: **87** (90-day retention)_
+_Last refreshed: 2026-10-23 15:48_
+_Active listings: **94** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-10-23
+
+### **🆕 NEW** — Talent & Workforce Industry & Process Advisor Manager, Banking — Accenture
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-10-23
+- **Apply:** https://www.linkedin.com/jobs/view/talent-workforce-industry-process-advisor-manager-banking-at-accenture-4481698068
+
+### **🆕 NEW** — Integrated Marketing Programs Manager — Accenture
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-10-23
+- **Apply:** https://www.linkedin.com/jobs/view/integrated-marketing-programs-manager-at-accenture-4481684827
+
+### **🆕 NEW** — Software Engineering Manager — Pearson
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-21
+- **Apply:** https://www.linkedin.com/jobs/view/software-engineering-manager-at-pearson-4471994123
+
+### **🆕 NEW** — Director of Reverse Transfer and Student Mobility — The State University of New York
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-23
+- **Apply:** https://www.linkedin.com/jobs/view/director-of-reverse-transfer-and-student-mobility-at-the-state-university-of-new-york-4472597953
+
+### **🆕 NEW** — Communications Manager, Field & Partner Communications — Autodesk
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Utica-Rome Area | **Source:** LinkedIn | **Posted:** 2026-10-20
+- **Apply:** https://www.linkedin.com/jobs/view/communications-manager-field-partner-communications-at-autodesk-4480731236
+
+### **🆕 NEW** — Senior Finance Manager Management Accountant — D2B
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-10-22
+- **Apply:** https://remoteOK.com/remote-jobs/remote-senior-finance-manager-management-accountant-d2b-1137556
+
+### **🆕 NEW** — Accounting & Finance Manager — Political Asylum Lawyers
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-10-22
+- **Apply:** https://remoteOK.com/remote-jobs/remote-accounting-finance-manager-political-asylum-lawyers-1137555
+
 ## 2026-10-22
 
-### **🆕 NEW** — Clinical Data Manager — Penumbra
+### Clinical Data Manager — Penumbra
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Your Remote US Home Office | **Source:** RemoteOK | **Posted:** 2026-10-21
 - **Apply:** https://remoteOK.com/remote-jobs/remote-clinical-data-manager-penumbra-1137550
