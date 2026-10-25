@@ -1,18 +1,25 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-10-24 14:42_
-_Active listings: **96** (90-day retention)_
+_Last refreshed: 2026-10-25 14:59_
+_Active listings: **97** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-10-25
+
+### **🆕 NEW** — Manager, Content Marketing (Exec & Transactions) — KPMG US
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-19
+- **Apply:** https://www.linkedin.com/jobs/view/manager-content-marketing-exec-transactions-at-kpmg-us-4480247145
+
 ## 2026-10-24
 
-### **🆕 NEW** — Public Information Specialist 2 (Digital Content) - Albany — New York State Department of Labor
+### Public Information Specialist 2 (Digital Content) - Albany — New York State Department of Labor
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-23
 - **Apply:** https://www.linkedin.com/jobs/view/public-information-specialist-2-digital-content-albany-at-new-york-state-department-of-labor-4483160818
 
-### **🆕 NEW** — Accounting and Implementation Manager — Aprio
+### Accounting and Implementation Manager — Aprio
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-10-23
 - **Apply:** https://remoteOK.com/remote-jobs/remote-accounting-and-implementation-manager-aprio-1137560
