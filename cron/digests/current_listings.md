@@ -1,13 +1,20 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-10-25 14:59_
-_Active listings: **97** (90-day retention)_
+_Last refreshed: 2026-10-26 17:30_
+_Active listings: **98** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-10-26
+
+### **🆕 NEW** — Americas Consulting Communications & Engagement Talent, Operations & Finance - Associate Director — EY
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-26
+- **Apply:** https://www.linkedin.com/jobs/view/americas-consulting-communications-engagement-talent-operations-finance-associate-director-at-ey-4481479094
+
 ## 2026-10-25
 
-### **🆕 NEW** — Manager, Content Marketing (Exec & Transactions) — KPMG US
+### Manager, Content Marketing (Exec & Transactions) — KPMG US
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-19
 - **Apply:** https://www.linkedin.com/jobs/view/manager-content-marketing-exec-transactions-at-kpmg-us-4480247145
