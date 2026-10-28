@@ -1,24 +1,36 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-10-27 16:46_
-_Active listings: **101** (90-day retention)_
+_Last refreshed: 2026-10-28 17:14_
+_Active listings: **103** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-10-28
+
+### **🆕 NEW** — Manager, Service Delivery Management — Pearson
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-28
+- **Apply:** https://www.linkedin.com/jobs/view/manager-service-delivery-management-at-pearson-4483884982
+
+### **🆕 NEW** — AI Content Transformation Manager - Life Sciences — Accenture
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-10-23
+- **Apply:** https://www.linkedin.com/jobs/view/ai-content-transformation-manager-life-sciences-at-accenture-4481685830
+
 ## 2026-10-27
 
-### **🆕 NEW** — Director of the Pathways into Education Center - Dean's Office-School of Education — University at Albany
+### Director of the Pathways into Education Center - Dean's Office-School of Education — University at Albany
 - **Match:** [██░░░░░░░░] 20% (10/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-27
 - **Apply:** https://www.linkedin.com/jobs/view/director-of-the-pathways-into-education-center-dean-s-office-school-of-education-at-university-at-albany-4483798936
 
-### **🆕 NEW** — Director - School of Nursing - St Peter's — Trinity Health
+### Director - School of Nursing - St Peter's — Trinity Health
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-27
 - **Also posted by:** St. Peter's Health Partners
 - **Apply:** https://www.linkedin.com/jobs/view/director-school-of-nursing-st-peter-s-at-trinity-health-4483794561
 
-### **🆕 NEW** — Academia GTM Associate Director — Accenture
+### Academia GTM Associate Director — Accenture
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-10-27
 - **Apply:** https://www.linkedin.com/jobs/view/academia-gtm-associate-director-at-accenture-4483293261
