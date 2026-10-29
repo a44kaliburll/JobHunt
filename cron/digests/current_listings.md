@@ -1,18 +1,25 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-10-28 17:14_
-_Active listings: **103** (90-day retention)_
+_Last refreshed: 2026-10-29 17:29_
+_Active listings: **104** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-10-29
+
+### **🆕 NEW** — US Director, Strategic Training Programs — National Grid
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-26
+- **Apply:** https://www.linkedin.com/jobs/view/us-director-strategic-training-programs-at-national-grid-4481813456
+
 ## 2026-10-28
 
-### **🆕 NEW** — Manager, Service Delivery Management — Pearson
+### Manager, Service Delivery Management — Pearson
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-28
 - **Apply:** https://www.linkedin.com/jobs/view/manager-service-delivery-management-at-pearson-4483884982
 
-### **🆕 NEW** — AI Content Transformation Manager - Life Sciences — Accenture
+### AI Content Transformation Manager - Life Sciences — Accenture
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-10-23
 - **Apply:** https://www.linkedin.com/jobs/view/ai-content-transformation-manager-life-sciences-at-accenture-4481685830
