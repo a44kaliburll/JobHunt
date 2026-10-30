@@ -1,13 +1,35 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-10-29 17:29_
-_Active listings: **104** (90-day retention)_
+_Last refreshed: 2026-10-30 17:05_
+_Active listings: **108** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-10-30
+
+### **🆕 NEW** — Content Partnerships Manager — Accenture
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-10-29
+- **Apply:** https://www.linkedin.com/jobs/view/content-partnerships-manager-at-accenture-4484169242
+
+### **🆕 NEW** — Program Manager- EdTech — Accenture
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-10-30
+- **Apply:** https://www.linkedin.com/jobs/view/program-manager-edtech-at-accenture-4484838348
+
+### **🆕 NEW** — Manager of School Strategy and Projects (Immediate) — KIPP Capital Region Public Schools
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-29
+- **Apply:** https://www.linkedin.com/jobs/view/manager-of-school-strategy-and-projects-immediate-at-kipp-capital-region-public-schools-4484581509
+
+### **🆕 NEW** — Front End Developer — Edconic
+- **Match:** [█░░░░░░░░░] 12% (6/50)
+- **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-10-28
+- **Apply:** https://remoteOK.com/remote-jobs/remote-front-end-developer-edconic-1137597
+
 ## 2026-10-29
 
-### **🆕 NEW** — US Director, Strategic Training Programs — National Grid
+### US Director, Strategic Training Programs — National Grid
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-26
 - **Apply:** https://www.linkedin.com/jobs/view/us-director-strategic-training-programs-at-national-grid-4481813456
