@@ -1,23 +1,30 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-11-01 17:12_
-_Active listings: **113** (90-day retention)_
+_Last refreshed: 2026-11-02 20:51_
+_Active listings: **114** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-11-02
+
+### **🆕 NEW** — Partner Operations Manager — Mecka
+- **Match:** [██░░░░░░░░] 20% (10/50)
+- **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-11-01
+- **Apply:** https://remoteOK.com/remote-jobs/remote-partner-operations-manager-mecka-1137609
+
 ## 2026-11-01
 
-### **🆕 NEW** — Assistant Teaching Professor,  GIS Center for Interdisciplinary Research — Skidmore College
+### Assistant Teaching Professor,  GIS Center for Interdisciplinary Research — Skidmore College
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Saratoga Springs, NY | **Source:** LinkedIn | **Posted:** 2026-11-01
 - **Apply:** https://www.linkedin.com/jobs/view/assistant-teaching-professor-gis-center-for-interdisciplinary-research-at-skidmore-college-4485981359
 
-### **🆕 NEW** — Multimedia Production Representative 3 - Creative Director - VID 227965 — NYS Office of General Services
+### Multimedia Production Representative 3 - Creative Director - VID 227965 — NYS Office of General Services
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-29
 - **Apply:** https://www.linkedin.com/jobs/view/multimedia-production-representative-3-creative-director-vid-227965-at-nys-office-of-general-services-4484536620
 
-### **🆕 NEW** — Product Manager — Robert Half
+### Product Manager — Robert Half
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Schenectady, NY | **Source:** LinkedIn | **Posted:** 2026-10-27
 - **Apply:** https://www.linkedin.com/jobs/view/product-manager-at-robert-half-4484066659
