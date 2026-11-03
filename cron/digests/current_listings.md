@@ -1,13 +1,30 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-11-02 20:51_
-_Active listings: **114** (90-day retention)_
+_Last refreshed: 2026-11-03 18:32_
+_Active listings: **117** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-11-03
+
+### **🆕 NEW** — Manager of People Strategy and Projects (Immediate) — KIPP Capital Region Public Schools
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-29
+- **Apply:** https://www.linkedin.com/jobs/view/manager-of-people-strategy-and-projects-immediate-at-kipp-capital-region-public-schools-4484571820
+
+### **🆕 NEW** — Technology Consulting Growth & Ecosystem Marketing Leader - Assistant Director — EY
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-02
+- **Apply:** https://www.linkedin.com/jobs/view/technology-consulting-growth-ecosystem-marketing-leader-assistant-director-at-ey-4484609553
+
+### **🆕 NEW** — Site Activation Manager 6 Month Contract Immediate start — uMed
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-11-02
+- **Apply:** https://remoteOK.com/remote-jobs/remote-site-activation-manager-6-month-contract-immediate-start-umed-1137620
+
 ## 2026-11-02
 
-### **🆕 NEW** — Partner Operations Manager — Mecka
+### Partner Operations Manager — Mecka
 - **Match:** [██░░░░░░░░] 20% (10/50)
 - **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-11-01
 - **Apply:** https://remoteOK.com/remote-jobs/remote-partner-operations-manager-mecka-1137609
