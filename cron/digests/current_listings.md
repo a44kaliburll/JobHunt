@@ -1,48 +1,60 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-11-04 18:45_
-_Active listings: **125** (90-day retention)_
+_Last refreshed: 2026-11-05 18:53_
+_Active listings: **127** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-11-05
+
+### **🆕 NEW** — Advanced Specialist, Portfolio Management (Enterprise Learning) — Pearson
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-05
+- **Apply:** https://www.linkedin.com/jobs/view/advanced-specialist-portfolio-management-enterprise-learning-at-pearson-4478456328
+
+### **🆕 NEW** — B2B Marketing Manager — Times Union Media Group
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-11-04
+- **Apply:** https://www.linkedin.com/jobs/view/b2b-marketing-manager-at-times-union-media-group-4486514921
+
 ## 2026-11-04
 
-### **🆕 NEW** — Learning Strategy & Operations Senior Principal/Associate Director - Life Science — Accenture
+### Learning Strategy & Operations Senior Principal/Associate Director - Life Science — Accenture
 - **Match:** [███░░░░░░░] 26% (13/50)
 - **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-11-04
 - **Apply:** https://www.linkedin.com/jobs/view/learning-strategy-operations-senior-principal-associate-director-life-science-at-accenture-4486369340
 
-### **🆕 NEW** — Technical Content Developer Associate Manager, AI POD — Accenture
+### Technical Content Developer Associate Manager, AI POD — Accenture
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-11-04
 - **Apply:** https://www.linkedin.com/jobs/view/technical-content-developer-associate-manager-ai-pod-at-accenture-4486350950
 
-### **🆕 NEW** — Quality Programs Manager — Excellus BCBS
+### Quality Programs Manager — Excellus BCBS
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-04
 - **Apply:** https://www.linkedin.com/jobs/view/quality-programs-manager-at-excellus-bcbs-4487507816
 
-### **🆕 NEW** — AI-Native Experience Engineer - Manager — EY
+### AI-Native Experience Engineer - Manager — EY
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-02
 - **Apply:** https://www.linkedin.com/jobs/view/ai-native-experience-engineer-manager-at-ey-4484399960
 
-### **🆕 NEW** — Field Service Technology Delivery Lead Manager — Accenture
+### Field Service Technology Delivery Lead Manager — Accenture
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-10-29
 - **Apply:** https://www.linkedin.com/jobs/view/field-service-technology-delivery-lead-manager-at-accenture-4484156867
 
-### **🆕 NEW** — SDC SE/Digital Engineering---Manager — EY
+### SDC SE/Digital Engineering---Manager — EY
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-10-29
 - **Apply:** https://www.linkedin.com/jobs/view/sdc-se-digital-engineering-manager-at-ey-4483400104
 
-### **🆕 NEW** — Senior Property Manager ENG — StaffRight
+### Senior Property Manager ENG — StaffRight
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-11-03
 - **Apply:** https://remoteOK.com/remote-jobs/remote-senior-property-manager-eng-staffright-1137624
 
-### **🆕 NEW** — Client Accounting Division Manager — Burkland Associates
+### Client Accounting Division Manager — Burkland Associates
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-11-03
 - **Apply:** https://remoteOK.com/remote-jobs/remote-client-accounting-division-manager-burkland-associates-1137621
