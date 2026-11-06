@@ -1,18 +1,35 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-11-05 18:53_
-_Active listings: **127** (90-day retention)_
+_Last refreshed: 2026-11-06 18:11_
+_Active listings: **130** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-11-06
+
+### **🆕 NEW** — Associate Executive Director of Human Resources — The Arc Lexington
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-05
+- **Apply:** https://www.linkedin.com/jobs/view/associate-executive-director-of-human-resources-at-the-arc-lexington-4486789912
+
+### **🆕 NEW** — B2B Marketing Creative Manager — Times Union Media Group
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-05
+- **Apply:** https://www.linkedin.com/jobs/view/b2b-marketing-creative-manager-at-times-union-media-group-4486761582
+
+### **🆕 NEW** — Operations Expert with Python for AI Supply Chain Task Design — Toptal
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Anywhere in the World | **Source:** RemoteOK | **Posted:** 2026-11-05
+- **Apply:** https://remoteOK.com/remote-jobs/remote-operations-expert-with-python-for-ai-supply-chain-task-design-toptal-1137690
+
 ## 2026-11-05
 
-### **🆕 NEW** — Advanced Specialist, Portfolio Management (Enterprise Learning) — Pearson
+### Advanced Specialist, Portfolio Management (Enterprise Learning) — Pearson
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-05
 - **Apply:** https://www.linkedin.com/jobs/view/advanced-specialist-portfolio-management-enterprise-learning-at-pearson-4478456328
 
-### **🆕 NEW** — B2B Marketing Manager — Times Union Media Group
+### B2B Marketing Manager — Times Union Media Group
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-11-04
 - **Apply:** https://www.linkedin.com/jobs/view/b2b-marketing-manager-at-times-union-media-group-4486514921
