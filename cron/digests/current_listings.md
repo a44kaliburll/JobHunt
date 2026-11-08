@@ -1,23 +1,23 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-11-07 16:56_
+_Last refreshed: 2026-11-08 17:09_
 _Active listings: **133** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
 ## 2026-11-07
 
-### **🆕 NEW** — Agile Program Manager — Toptal
+### Agile Program Manager — Toptal
 - **Match:** [██░░░░░░░░] 20% (10/50)
 - **Location:** Anywhere in the World | **Source:** RemoteOK | **Posted:** 2026-11-05
 - **Apply:** https://remoteOK.com/remote-jobs/remote-agile-program-manager-toptal-1137692
 
-### **🆕 NEW** — Talent & Workforce Consulting Manager/Sr. Manager - Life Science — Accenture
+### Talent & Workforce Consulting Manager/Sr. Manager - Life Science — Accenture
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-11-04
 - **Apply:** https://www.linkedin.com/jobs/view/talent-workforce-consulting-manager-sr-manager-life-science-at-accenture-4486366382
 
-### **🆕 NEW** — Sr. Manager, Data Science & Analytics — Sunrun
+### Sr. Manager, Data Science & Analytics — Sunrun
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Flexible / Remote | **Source:** TheMuse | **Posted:** 2026-11-06
 - **Apply:** https://www.themuse.com/jobs/sunrun/sr-manager-data-science-analytics
