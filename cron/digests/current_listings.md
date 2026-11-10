@@ -1,9 +1,16 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-11-09 21:32_
-_Active listings: **133** (90-day retention)_
+_Last refreshed: 2026-11-10 18:44_
+_Active listings: **134** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
+
+## 2026-11-10
+
+### **🆕 NEW** — Assistant in Instructional Services (TBD), (NY HELPS), Box OEP-343/65109 — New York State Education Department
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-10
+- **Apply:** https://www.linkedin.com/jobs/view/assistant-in-instructional-services-tbd-ny-helps-box-oep-343-65109-at-new-york-state-education-department-4487437514
 
 ## 2026-11-07
 
