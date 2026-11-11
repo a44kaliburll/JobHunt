@@ -1,13 +1,25 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-11-10 18:44_
-_Active listings: **134** (90-day retention)_
+_Last refreshed: 2026-11-11 18:48_
+_Active listings: **136** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-11-11
+
+### **🆕 NEW** — Assistant Director — IPRO
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-10
+- **Apply:** https://www.linkedin.com/jobs/view/assistant-director-at-ipro-4487852367
+
+### **🆕 NEW** — Manager Information Technology Services 1, Box PIMS-1133/01719 — New York State Education Department
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-10
+- **Apply:** https://www.linkedin.com/jobs/view/manager-information-technology-services-1-box-pims-1133-01719-at-new-york-state-education-department-4487442177
+
 ## 2026-11-10
 
-### **🆕 NEW** — Assistant in Instructional Services (TBD), (NY HELPS), Box OEP-343/65109 — New York State Education Department
+### Assistant in Instructional Services (TBD), (NY HELPS), Box OEP-343/65109 — New York State Education Department
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-10
 - **Apply:** https://www.linkedin.com/jobs/view/assistant-in-instructional-services-tbd-ny-helps-box-oep-343-65109-at-new-york-state-education-department-4487437514
