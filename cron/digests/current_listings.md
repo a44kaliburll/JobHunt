@@ -1,18 +1,50 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-11-11 18:48_
-_Active listings: **136** (90-day retention)_
+_Last refreshed: 2026-11-12 19:00_
+_Active listings: **142** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-11-12
+
+### **🆕 NEW** — Director, Digital Trust & Safety — KPMG US
+- **Match:** [███░░░░░░░] 26% (13/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-11
+- **Apply:** https://www.linkedin.com/jobs/view/director-digital-trust-safety-at-kpmg-us-4488652640
+
+### **🆕 NEW** — Strategic Communications Manager - Office of Academic Affairs — Empire State University
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Saratoga Springs, NY | **Source:** LinkedIn | **Posted:** 2026-11-12
+- **Apply:** https://www.linkedin.com/jobs/view/strategic-communications-manager-office-of-academic-affairs-at-empire-state-university-4490381126
+
+### **🆕 NEW** — Manager, Content Strategy — KPMG US
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-09
+- **Apply:** https://www.linkedin.com/jobs/view/manager-content-strategy-at-kpmg-us-4487955876
+
+### **🆕 NEW** — Director, Research Library (NY HELPS), Box OCE-1618/22642 — New York State Education Department
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-10
+- **Apply:** https://www.linkedin.com/jobs/view/director-research-library-ny-helps-box-oce-1618-22642-at-new-york-state-education-department-4487434632
+
+### **🆕 NEW** — Director of Facilities Management Software — The State University of New York
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-05
+- **Apply:** https://www.linkedin.com/jobs/view/director-of-facilities-management-software-at-the-state-university-of-new-york-4486916147
+
+### **🆕 NEW** — Director, Customer Identity and Access Management - Okta & Entra — KPMG US
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-11
+- **Apply:** https://www.linkedin.com/jobs/view/director-customer-identity-and-access-management-okta-entra-at-kpmg-us-4488655541
+
 ## 2026-11-11
 
-### **🆕 NEW** — Assistant Director — IPRO
+### Assistant Director — IPRO
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-10
 - **Apply:** https://www.linkedin.com/jobs/view/assistant-director-at-ipro-4487852367
 
-### **🆕 NEW** — Manager Information Technology Services 1, Box PIMS-1133/01719 — New York State Education Department
+### Manager Information Technology Services 1, Box PIMS-1133/01719 — New York State Education Department
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-10
 - **Apply:** https://www.linkedin.com/jobs/view/manager-information-technology-services-1-box-pims-1133-01719-at-new-york-state-education-department-4487442177
