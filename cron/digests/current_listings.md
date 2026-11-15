@@ -1,23 +1,23 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-11-14 17:15_
+_Last refreshed: 2026-11-15 17:54_
 _Active listings: **146** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
 ## 2026-11-14
 
-### **🆕 NEW** — Instructional Designer & Learning Lead (Financial Services / System Rollout) — Pacer Group
+### Instructional Designer & Learning Lead (Financial Services / System Rollout) — Pacer Group
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-13
 - **Apply:** https://www.linkedin.com/jobs/view/instructional-designer-learning-lead-financial-services-system-rollout-at-pacer-group-4488996098
 
-### **🆕 NEW** — Communications Director — PwC
+### Communications Director — PwC
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-14
 - **Apply:** https://www.linkedin.com/jobs/view/communications-director-at-pwc-4491039955
 
-### **🆕 NEW** — Director, Content and Social Media — Darktrace
+### Director, Content and Social Media — Darktrace
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, New York Metropolitan Area | **Source:** LinkedIn | **Posted:** 2026-11-13
 - **Apply:** https://www.linkedin.com/jobs/view/director-content-and-social-media-at-darktrace-4489826927
