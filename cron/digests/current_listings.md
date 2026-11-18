@@ -1,23 +1,30 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-11-17 19:57_
-_Active listings: **149** (90-day retention)_
+_Last refreshed: 2026-11-18 19:28_
+_Active listings: **150** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-11-18
+
+### **🆕 NEW** — Engineering Manager Network Engineering — PatientPoint
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-11-17
+- **Apply:** https://remoteOK.com/remote-jobs/remote-engineering-manager-network-engineering-patientpoint-1137797
+
 ## 2026-11-17
 
-### **🆕 NEW** — Project Manager — NYSERDA
+### Project Manager — NYSERDA
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-17
 - **Apply:** https://www.linkedin.com/jobs/view/project-manager-at-nyserda-4490465686
 
-### **🆕 NEW** — Adobe Alliance Marketing Senior Manager — PwC
+### Adobe Alliance Marketing Senior Manager — PwC
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-17
 - **Apply:** https://www.linkedin.com/jobs/view/adobe-alliance-marketing-senior-manager-at-pwc-4491106778
 
-### **🆕 NEW** — Marketing Director – Advisory Commercial & Demand — PwC
+### Marketing Director – Advisory Commercial & Demand — PwC
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-17
 - **Apply:** https://www.linkedin.com/jobs/view/marketing-director-%E2%80%93-advisory-commercial-demand-at-pwc-4490968622
