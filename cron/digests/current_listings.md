@@ -1,13 +1,35 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-11-18 19:28_
-_Active listings: **150** (90-day retention)_
+_Last refreshed: 2026-11-19 19:33_
+_Active listings: **154** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-11-19
+
+### **🆕 NEW** — Nursing Program Director - Rochester, NY — Health Sciences Educators LLC
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-18
+- **Apply:** https://www.linkedin.com/jobs/view/nursing-program-director-rochester-ny-4492115045
+
+### **🆕 NEW** — Manager EDI — Gravie
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-11-18
+- **Apply:** https://remoteOK.com/remote-jobs/remote-manager-edi-gravie-1137804
+
+### **🆕 NEW** — Project Manager — Syner-G
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-11-18
+- **Apply:** https://remoteOK.com/remote-jobs/remote-project-manager-syner-g-1137806
+
+### **🆕 NEW** — Business Development Manager — Maya HTT
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-11-18
+- **Apply:** https://remoteOK.com/remote-jobs/remote-business-development-manager-maya-htt-1137802
+
 ## 2026-11-18
 
-### **🆕 NEW** — Engineering Manager Network Engineering — PatientPoint
+### Engineering Manager Network Engineering — PatientPoint
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-11-17
 - **Apply:** https://remoteOK.com/remote-jobs/remote-engineering-manager-network-engineering-patientpoint-1137797
