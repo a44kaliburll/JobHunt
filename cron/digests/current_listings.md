@@ -1,28 +1,35 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-11-19 19:33_
-_Active listings: **154** (90-day retention)_
+_Last refreshed: 2026-11-20 19:11_
+_Active listings: **155** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-11-20
+
+### **🆕 NEW** — Velocity, Sales Director - USA & Europe — Storyblok
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Worldwide | **Source:** RemoteOK | **Posted:** 2026-11-19
+- **Apply:** https://remoteOK.com/remote-jobs/remote-velocity-sales-director-usa-europe-storyblok-1137845
+
 ## 2026-11-19
 
-### **🆕 NEW** — Nursing Program Director - Rochester, NY — Health Sciences Educators LLC
+### Nursing Program Director - Rochester, NY — Health Sciences Educators LLC
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-18
 - **Apply:** https://www.linkedin.com/jobs/view/nursing-program-director-rochester-ny-4492115045
 
-### **🆕 NEW** — Manager EDI — Gravie
+### Manager EDI — Gravie
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-11-18
 - **Apply:** https://remoteOK.com/remote-jobs/remote-manager-edi-gravie-1137804
 
-### **🆕 NEW** — Project Manager — Syner-G
+### Project Manager — Syner-G
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-11-18
 - **Apply:** https://remoteOK.com/remote-jobs/remote-project-manager-syner-g-1137806
 
-### **🆕 NEW** — Business Development Manager — Maya HTT
+### Business Development Manager — Maya HTT
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Remote | **Source:** RemoteOK | **Posted:** 2026-11-18
 - **Apply:** https://remoteOK.com/remote-jobs/remote-business-development-manager-maya-htt-1137802
