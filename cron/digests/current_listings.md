@@ -1,13 +1,36 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-11-20 19:11_
-_Active listings: **155** (90-day retention)_
+_Last refreshed: 2026-11-21 18:07_
+_Active listings: **159** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-11-21
+
+### **🆕 NEW** — Account Director — Princeton10
+- **Match:** [███░░░░░░░] 26% (13/50)
+- **Location:** Remote, EST United States | **Source:** RemoteOK | **Posted:** 2026-11-20
+- **Apply:** https://remoteOK.com/remote-jobs/remote-account-director-princeton10-1137913
+
+### **🆕 NEW** — Instructional Designer-Academics - School of Nursing — St. Peter's Health Partners
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-20
+- **Also posted by:** Trinity Health
+- **Apply:** https://www.linkedin.com/jobs/view/instructional-designer-academics-school-of-nursing-at-st-peter-s-health-partners-4492843492
+
+### **🆕 NEW** — Manager, Growth Marketing, Tax — KPMG US
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-19
+- **Apply:** https://www.linkedin.com/jobs/view/manager-growth-marketing-tax-at-kpmg-us-4492518531
+
+### **🆕 NEW** — Senior Manager, Product Analytics (Growth) — iFIT
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Worldwide | **Source:** RemoteOK | **Posted:** 2026-11-20
+- **Apply:** https://remoteOK.com/remote-jobs/remote-senior-manager-product-analytics-growth-ifit-1137912
+
 ## 2026-11-20
 
-### **🆕 NEW** — Velocity, Sales Director - USA & Europe — Storyblok
+### Velocity, Sales Director - USA & Europe — Storyblok
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Worldwide | **Source:** RemoteOK | **Posted:** 2026-11-19
 - **Apply:** https://remoteOK.com/remote-jobs/remote-velocity-sales-director-usa-europe-storyblok-1137845
