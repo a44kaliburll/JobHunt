@@ -1,29 +1,46 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-11-21 18:07_
-_Active listings: **159** (90-day retention)_
+_Last refreshed: 2026-11-22 18:36_
+_Active listings: **162** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-11-22
+
+### **🆕 NEW** — Manager, Product Design — Carrot
+- **Match:** [██░░░░░░░░] 20% (10/50)
+- **Location:** Worldwide | **Source:** RemoteOK | **Posted:** 2026-11-21
+- **Apply:** https://remoteOK.com/remote-jobs/remote-manager-product-design-carrot-1137927
+
+### **🆕 NEW** — Manager, Network Contracting (Southeast Region) — Oscar Health
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Worldwide | **Source:** RemoteOK | **Posted:** 2026-11-21
+- **Apply:** https://remoteOK.com/remote-jobs/remote-manager-network-contracting-southeast-region-oscar-health-1137925
+
+### **🆕 NEW** — Sr. Security Operations Manager — Carrot
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Worldwide | **Source:** RemoteOK | **Posted:** 2026-11-21
+- **Apply:** https://remoteOK.com/remote-jobs/remote-sr-security-operations-manager-carrot-1137930
+
 ## 2026-11-21
 
-### **🆕 NEW** — Account Director — Princeton10
+### Account Director — Princeton10
 - **Match:** [███░░░░░░░] 26% (13/50)
 - **Location:** Remote, EST United States | **Source:** RemoteOK | **Posted:** 2026-11-20
 - **Apply:** https://remoteOK.com/remote-jobs/remote-account-director-princeton10-1137913
 
-### **🆕 NEW** — Instructional Designer-Academics - School of Nursing — St. Peter's Health Partners
+### Instructional Designer-Academics - School of Nursing — St. Peter's Health Partners
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-20
 - **Also posted by:** Trinity Health
 - **Apply:** https://www.linkedin.com/jobs/view/instructional-designer-academics-school-of-nursing-at-st-peter-s-health-partners-4492843492
 
-### **🆕 NEW** — Manager, Growth Marketing, Tax — KPMG US
+### Manager, Growth Marketing, Tax — KPMG US
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-19
 - **Apply:** https://www.linkedin.com/jobs/view/manager-growth-marketing-tax-at-kpmg-us-4492518531
 
-### **🆕 NEW** — Senior Manager, Product Analytics (Growth) — iFIT
+### Senior Manager, Product Analytics (Growth) — iFIT
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Worldwide | **Source:** RemoteOK | **Posted:** 2026-11-20
 - **Apply:** https://remoteOK.com/remote-jobs/remote-senior-manager-product-analytics-growth-ifit-1137912
@@ -67,7 +84,7 @@ Sorted by date first seen, newest first. **NEW** = surfaced in the most recent r
 ## 2026-11-17
 
 ### Project Manager — NYSERDA
-- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Match:** [██░░░░░░░░] 20% (10/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-17
 - **Apply:** https://www.linkedin.com/jobs/view/project-manager-at-nyserda-4490465686
 
