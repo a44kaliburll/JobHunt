@@ -1,23 +1,35 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-11-22 18:36_
-_Active listings: **162** (90-day retention)_
+_Last refreshed: 2026-11-23 22:48_
+_Active listings: **164** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-11-23
+
+### **🆕 NEW** — Social Media & Content Manager — Prime Group Holdings, LLC
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Saratoga Springs, NY | **Source:** LinkedIn | **Posted:** 2026-11-18
+- **Apply:** https://www.linkedin.com/jobs/view/social-media-content-manager-at-prime-group-holdings-llc-4482206318
+
+### **🆕 NEW** — Executive Director of On Ramp (Grant-Funded) — Mohawk Valley Community College
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Utica-Rome Area | **Source:** LinkedIn | **Posted:** 2026-11-21
+- **Apply:** https://www.linkedin.com/jobs/view/executive-director-of-on-ramp-grant-funded-at-mohawk-valley-community-college-4477876618
+
 ## 2026-11-22
 
-### **🆕 NEW** — Manager, Product Design — Carrot
+### Manager, Product Design — Carrot
 - **Match:** [██░░░░░░░░] 20% (10/50)
 - **Location:** Worldwide | **Source:** RemoteOK | **Posted:** 2026-11-21
 - **Apply:** https://remoteOK.com/remote-jobs/remote-manager-product-design-carrot-1137927
 
-### **🆕 NEW** — Manager, Network Contracting (Southeast Region) — Oscar Health
+### Manager, Network Contracting (Southeast Region) — Oscar Health
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Worldwide | **Source:** RemoteOK | **Posted:** 2026-11-21
 - **Apply:** https://remoteOK.com/remote-jobs/remote-manager-network-contracting-southeast-region-oscar-health-1137925
 
-### **🆕 NEW** — Sr. Security Operations Manager — Carrot
+### Sr. Security Operations Manager — Carrot
 - **Match:** [█░░░░░░░░░] 14% (7/50)
 - **Location:** Worldwide | **Source:** RemoteOK | **Posted:** 2026-11-21
 - **Apply:** https://remoteOK.com/remote-jobs/remote-sr-security-operations-manager-carrot-1137930
