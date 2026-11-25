@@ -1,9 +1,21 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-11-24 21:25_
-_Active listings: **164** (90-day retention)_
+_Last refreshed: 2026-11-25 20:33_
+_Active listings: **166** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
+
+## 2026-11-25
+
+### **🆕 NEW** — TTS Integration Manager - BU — Turner Construction Company
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-24
+- **Apply:** https://www.linkedin.com/jobs/view/tts-integration-manager-bu-at-turner-construction-company-4494424720
+
+### **🆕 NEW** — Agile Project Manager — Cloud and Things
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-25
+- **Apply:** https://www.linkedin.com/jobs/view/agile-project-manager-at-cloud-and-things-4493426954
 
 ## 2026-11-23
 
