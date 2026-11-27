@@ -1,9 +1,16 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-11-26 20:21_
-_Active listings: **166** (90-day retention)_
+_Last refreshed: 2026-11-27 20:07_
+_Active listings: **167** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
+
+## 2026-11-27
+
+### **🆕 NEW** — Specialist, Customer Success (Higher Education) — Pearson
+- **Match:** [██░░░░░░░░] 20% (10/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-21
+- **Apply:** https://www.linkedin.com/jobs/view/specialist-customer-success-higher-education-at-pearson-4492872415
 
 ## 2026-11-25
 
