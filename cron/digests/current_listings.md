@@ -1,13 +1,20 @@
 # Job Hunt — Working List
 
-_Last refreshed: 2026-11-27 20:07_
-_Active listings: **167** (90-day retention)_
+_Last refreshed: 2026-11-28 19:02_
+_Active listings: **168** (90-day retention)_
 
 Sorted by date first seen, newest first. **NEW** = surfaced in the most recent run.
 
+## 2026-11-28
+
+### **🆕 NEW** — Public Information Assistant (Digital Content) - VID 229547 — NYS Office of General Services
+- **Match:** [█░░░░░░░░░] 14% (7/50)
+- **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-24
+- **Apply:** https://www.linkedin.com/jobs/view/public-information-assistant-digital-content-vid-229547-at-nys-office-of-general-services-4494389856
+
 ## 2026-11-27
 
-### **🆕 NEW** — Specialist, Customer Success (Higher Education) — Pearson
+### Specialist, Customer Success (Higher Education) — Pearson
 - **Match:** [██░░░░░░░░] 20% (10/50)
 - **Location:** Albany, NY | **Source:** LinkedIn | **Posted:** 2026-11-21
 - **Apply:** https://www.linkedin.com/jobs/view/specialist-customer-success-higher-education-at-pearson-4492872415
